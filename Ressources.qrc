@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/new/ImagesPrefix">
+        <file>PNGs/022-save.png</file>
+        <file>PNGs/056-plus.png</file>
+        <file>PNGs/058-error.png</file>
+        <file>PNGs/135-map.png</file>
+        <file>PNGs/138-placeholder.png</file>
+        <file>PNGs/276-trash.png</file>
+        <file>PNGs/pngegg.png</file>
+    </qresource>
+    <qresource prefix="/"/>
+</RCC>
