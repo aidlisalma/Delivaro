@@ -4,34 +4,44 @@
 #include <QDate>
 #include <QSqlQuery>
 #include<QSqlQueryModel>
-
+#include <QSqlRecord>
+#include <QTableView>
+#include <QFile>
+#include <QFileDialog>
+#include <QCoreApplication>
+#include <QTextStream>
 
 class Colis
 {
         int NUM_COLIS;
         QString ADRESSE;
-        QString NOM_EXP;
-        QString NOM_DEST;
+        QString ID_PARTENAIRE;
+        QString ID_CLIENT;
         QDate DATE_LIVRAISON;
 public:
     Colis();
-    Colis(int n,QString a,QString b,QString c,QDate d):NUM_COLIS(n),ADRESSE(a),NOM_EXP(b),NOM_DEST(c),DATE_LIVRAISON(d){}
+    Colis(int n,QString a,QString b,QString c,QDate d):NUM_COLIS(n),ADRESSE(a),ID_PARTENAIRE(b),ID_CLIENT(c),DATE_LIVRAISON(d){}
     int get_NUM_COLIS(){return NUM_COLIS;}
     QString get_ADRESSE(){return ADRESSE;}
-    QString get_NOM_EXP(){return NOM_EXP;}
-    QString get_NOM_DEST(){return NOM_DEST;}
+    QString get_ID_PARTENAIRE(){return ID_PARTENAIRE;}
+    QString get_ID_CLIENT(){return ID_CLIENT;}
     QDate get_DATE_LIVRAISON() {return DATE_LIVRAISON;}
     void set_NUM_COLIS(int n) {NUM_COLIS=n;}
     void set_ADRESSE(QString a) {ADRESSE=a;}
-    void set_NOM_EXP(QString b) {NOM_EXP=b;}
-    void set_NOM_DEST(QString c) {NOM_DEST=c;}
+    void set_ID_PARTENAIRE(QString b) {ID_PARTENAIRE=b;}
+    void set_ID_CLIENT(QString c) {ID_CLIENT=c;}
     void set_DATE_LIVRAISON(QDate d) {DATE_LIVRAISON=d;}
 
     bool ajouter();
     QSqlQueryModel *afficher();
     bool supprimer(int);
-    QSqlQueryModel * trier_colis();
-    QSqlQueryModel * chercher_client(int num);
+   // QSqlQueryModel * trier_colis();
+    QSqlQueryModel * chercher_colis(int num);
+    void exporter(QTableView *table);
+    QVector<double> getData();
+    QSqlQueryModel *trier(QString critere,QString AD);
+
+
 };
 
 #endif // COLIS_H

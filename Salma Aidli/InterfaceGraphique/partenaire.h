@@ -4,6 +4,8 @@
 #include <QDate>
 #include <QSqlQuery>
 #include<QSqlQueryModel>
+#include <QSqlRecord>
+
 
 class partenaire
 {
@@ -26,6 +28,9 @@ public:
 
     bool ajouter();
     QSqlQueryModel *afficher();
+     bool supprimer(int);
+     QSqlQueryModel * chercher_partenaire(int);
+     QSqlQueryModel * trier_partenaire();
 };
 
 #endif // PARTENAIRE_H

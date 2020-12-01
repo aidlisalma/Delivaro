@@ -1,6 +1,6 @@
-QT       += core gui sql
+QT       += core gui sql multimedia network charts
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 
 CONFIG += c++11
 
@@ -13,13 +13,15 @@ SOURCES += \
     connection.cpp \
     main.cpp \
     mainwindow.cpp \
-    partenaire.cpp
+    partenaire.cpp \
+    qcustomplot.cpp
 
 HEADERS += \
     colis.h \
     connection.h \
     mainwindow.h \
-    partenaire.h
+    partenaire.h \
+    qcustomplot.h
 
 FORMS += \
     mainwindow.ui

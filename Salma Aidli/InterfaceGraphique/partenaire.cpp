@@ -34,3 +34,43 @@ QSqlQueryModel* partenaire::afficher()
 }
 
 
+bool partenaire::supprimer(int IDENTIFIANT)
+{  QSqlQuery qry;
+    QString a = QString::number(IDENTIFIANT);
+    qry.prepare("Delete from PARTENAIRES where IDENTIFIANT = :IDENTIFIANT");
+    qry.bindValue(":IDENTIFIANT",a);
+    return qry.exec();
+}
+
+QSqlQueryModel * partenaire::trier_partenaire()
+{QSqlQueryModel * model= new QSqlQueryModel();
+
+model->setQuery("SELECT * from PARTENAIRES ORDER BY IDENTIFIANT ASC");
+model->setHeaderData(0,Qt::Horizontal,QObject::tr("NOM"));
+model->setHeaderData(1,Qt::Horizontal,QObject::tr("IDENTIFIANT"));
+model->setHeaderData(2,Qt::Horizontal,QObject::tr("NOMBRE_COMMANDES"));
+model->setHeaderData(3,Qt::Horizontal,QObject::tr("TYPE_PRODUIT"));
+
+    return model;
+}
+
+
+QSqlQueryModel * partenaire::chercher_partenaire(int id){
+QSqlQuery q;
+q.prepare("select * from PARTENAIRES where IDENTIFIANT=:id");
+q.bindValue(":IDENTIFIANT", id);
+q.exec();
+QSqlQueryModel * model = new QSqlQueryModel;
+model->setQuery(q);
+model->setHeaderData(0,Qt::Horizontal,QObject::tr("NOM"));
+model->setHeaderData(1,Qt::Horizontal,QObject::tr("IDENTIFIANT"));
+model->setHeaderData(2,Qt::Horizontal,QObject::tr("NOMBRE_COMMANDES"));
+model->setHeaderData(3,Qt::Horizontal,QObject::tr("TYPE_PRODUIT"));
+
+QSqlRecord rec = model->record(0);
+int num = rec.value("IDENTIFIANT").toInt();
+if( num == id){
+    return model;
+  }
+    return nullptr;
+}

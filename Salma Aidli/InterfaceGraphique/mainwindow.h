@@ -27,11 +27,25 @@ private slots:
 
     void on_pushButton_ajouterColis_clicked();
 
-    void on_pushButton_modifier_clicked();
+    void on_pushButton_modifier_Partenaires_clicked();
 
-    void on_pushButton_modifier_2_clicked();
+    void on_pushButton_modifier_colis_clicked();
 
-    void on_pushButton_supprimer_clicked();
+    void on_pushButton_supprimer_colis_clicked();
+
+    void on_pushButton_recherche_colis_clicked();
+
+
+
+    void on_pushButton_export_colis_clicked();
+
+    void on_pushButton_tabcolis_clicked();
+
+    void on_pushButton_tabpartenaires_clicked();
+
+    void on_pushButton_StatistiquesColis_clicked();
+
+    void on_pushButton_triColis_clicked();
 
 private:
     Ui::MainWindow *ui;
