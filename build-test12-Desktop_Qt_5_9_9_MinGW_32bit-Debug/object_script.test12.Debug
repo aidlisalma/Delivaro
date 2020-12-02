@@ -1,0 +1,12 @@
+INPUT(
+./debug\connection.o
+./debug\main.o
+./debug\mainwindow.o
+./debug\publicite.o
+./debug\qcustomplot.o
+./debug\reclamation.o
+./debug\statistique.o
+./debug\moc_mainwindow.o
+./debug\moc_qcustomplot.o
+./debug\moc_statistique.o
+);

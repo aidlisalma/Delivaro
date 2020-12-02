@@ -1,4 +1,5 @@
-QT       += core gui sql
+QT       += core gui sql charts
+QT += core gui printsupport network widgets multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,13 +14,17 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     publicite.cpp \
-    reclamation.cpp
+    qcustomplot.cpp \
+    reclamation.cpp \
+    statistique.cpp
 
 HEADERS += \
     connection.h \
     mainwindow.h \
     publicite.h \
-    reclamation.h
+    qcustomplot.h \
+    reclamation.h \
+    statistique.h
 
 FORMS += \
     mainwindow.ui

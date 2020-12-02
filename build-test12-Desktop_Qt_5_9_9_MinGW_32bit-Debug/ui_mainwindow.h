@@ -15,6 +15,7 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDateEdit>
 #include <QtWidgets/QGroupBox>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -23,8 +24,9 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
-#include <QtWidgets/QTableWidget>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QWidget>
+#include <qcustomplot.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -32,6 +34,7 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
+    QHBoxLayout *horizontalLayout_2;
     QTabWidget *tabWidget;
     QWidget *tab;
     QGroupBox *groupBox_2;
@@ -46,12 +49,12 @@ public:
     QLineEdit *lineEdit_7;
     QLineEdit *lineEdit_9;
     QPushButton *pushButton_9;
-    QTableWidget *tableWidget_2;
+    QPushButton *pushButton_12;
+    QTableView *tableView;
+    QPushButton *pushButton_16;
     QPushButton *pushButton_10;
     QPushButton *pushButton_11;
-    QPushButton *pushButton_12;
-    QPushButton *pushButton_13;
-    QPushButton *pushButton_14;
+    QCustomPlot *gplot;
     QWidget *tab_2;
     QGroupBox *groupBox;
     QLabel *label;
@@ -62,15 +65,20 @@ public:
     QLineEdit *lineEdit;
     QLineEdit *lineEdit_4;
     QLineEdit *lineEdit_2;
+    QDateEdit *dateEdit_2;
+    QLabel *label_9;
     QLineEdit *lineEdit_3;
     QLineEdit *lineEdit_5;
     QPushButton *pushButton_2;
-    QTableWidget *tableWidget;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_4;
     QPushButton *pushButton_5;
     QPushButton *pushButton_6;
+    QTableView *tableView_2;
+    QPushButton *pushButton_15;
+    QPushButton *pushButton_3;
+    QPushButton *pushButton_4;
+    QCustomPlot *widget;
     QPushButton *pushButton_7;
+    QPushButton *pushButton_13;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -78,7 +86,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(798, 399);
+        MainWindow->resize(1072, 542);
         MainWindow->setStyleSheet(QLatin1String("QMainWindow\n"
 "{\n"
 "background-color:#FFEEE7;\n"
@@ -86,9 +94,10 @@ public:
 "}"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
+        horizontalLayout_2 = new QHBoxLayout(centralwidget);
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         tabWidget = new QTabWidget(centralwidget);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
-        tabWidget->setGeometry(QRect(0, 0, 801, 381));
         tabWidget->setStyleSheet(QLatin1String("\n"
 "\n"
 "QTabWidget:pane {\n"
@@ -114,7 +123,7 @@ public:
 "}"));
         pushButton_8 = new QPushButton(groupBox_2);
         pushButton_8->setObjectName(QStringLiteral("pushButton_8"));
-        pushButton_8->setGeometry(QRect(80, 180, 81, 31));
+        pushButton_8->setGeometry(QRect(70, 180, 101, 31));
         pushButton_8->setStyleSheet(QLatin1String("QPushButton {\n"
 " background-color:#e86054;  /* Green */ \n"
 "  border: none;\n"
@@ -151,7 +160,7 @@ public:
         label_5->setGeometry(QRect(20, 20, 47, 13));
         label_7 = new QLabel(groupBox_2);
         label_7->setObjectName(QStringLiteral("label_7"));
-        label_7->setGeometry(QRect(20, 100, 47, 13));
+        label_7->setGeometry(QRect(20, 100, 71, 16));
         label_8 = new QLabel(groupBox_2);
         label_8->setObjectName(QStringLiteral("label_8"));
         label_8->setGeometry(QRect(20, 140, 47, 13));
@@ -199,80 +208,9 @@ public:
 "\n"
 "background-color:#FCDBCE;\n"
 "}"));
-        tableWidget_2 = new QTableWidget(tab);
-        if (tableWidget_2->columnCount() < 4)
-            tableWidget_2->setColumnCount(4);
-        QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
-        tableWidget_2->setHorizontalHeaderItem(0, __qtablewidgetitem);
-        QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
-        tableWidget_2->setHorizontalHeaderItem(1, __qtablewidgetitem1);
-        QTableWidgetItem *__qtablewidgetitem2 = new QTableWidgetItem();
-        tableWidget_2->setHorizontalHeaderItem(2, __qtablewidgetitem2);
-        QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
-        tableWidget_2->setHorizontalHeaderItem(3, __qtablewidgetitem3);
-        if (tableWidget_2->rowCount() < 7)
-            tableWidget_2->setRowCount(7);
-        QTableWidgetItem *__qtablewidgetitem4 = new QTableWidgetItem();
-        tableWidget_2->setVerticalHeaderItem(0, __qtablewidgetitem4);
-        QTableWidgetItem *__qtablewidgetitem5 = new QTableWidgetItem();
-        tableWidget_2->setVerticalHeaderItem(1, __qtablewidgetitem5);
-        QTableWidgetItem *__qtablewidgetitem6 = new QTableWidgetItem();
-        tableWidget_2->setVerticalHeaderItem(2, __qtablewidgetitem6);
-        QTableWidgetItem *__qtablewidgetitem7 = new QTableWidgetItem();
-        tableWidget_2->setVerticalHeaderItem(3, __qtablewidgetitem7);
-        QTableWidgetItem *__qtablewidgetitem8 = new QTableWidgetItem();
-        tableWidget_2->setVerticalHeaderItem(4, __qtablewidgetitem8);
-        QTableWidgetItem *__qtablewidgetitem9 = new QTableWidgetItem();
-        tableWidget_2->setVerticalHeaderItem(5, __qtablewidgetitem9);
-        QTableWidgetItem *__qtablewidgetitem10 = new QTableWidgetItem();
-        tableWidget_2->setVerticalHeaderItem(6, __qtablewidgetitem10);
-        tableWidget_2->setObjectName(QStringLiteral("tableWidget_2"));
-        tableWidget_2->setGeometry(QRect(270, 60, 411, 192));
-        pushButton_10 = new QPushButton(tab);
-        pushButton_10->setObjectName(QStringLiteral("pushButton_10"));
-        pushButton_10->setGeometry(QRect(340, 272, 91, 31));
-        pushButton_10->setStyleSheet(QLatin1String("QPushButton {\n"
-" background-color:#e86054;  /* Green */ \n"
-"  border: none;\n"
-" /* color: gray; \n"
-"  padding: 15px 32px;*/\n"
-"  text-align: center;\n"
-"  font-size: 16px;\n"
-"	border:9px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"\n"
-"background-color:#e0987b;\n"
-"color:#7d2b20;\n"
-"}\n"
-"QPushButton:click{\n"
-"\n"
-"background-color:#FCDBCE;\n"
-"}"));
-        pushButton_11 = new QPushButton(tab);
-        pushButton_11->setObjectName(QStringLiteral("pushButton_11"));
-        pushButton_11->setGeometry(QRect(450, 272, 91, 31));
-        pushButton_11->setStyleSheet(QLatin1String("QPushButton {\n"
-" background-color:#e86054;  /* Green */ \n"
-"  border: none;\n"
-" /* color: gray; \n"
-"  padding: 15px 32px;*/\n"
-"  text-align: center;\n"
-"  font-size: 16px;\n"
-"	border:9px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"\n"
-"background-color:#e0987b;\n"
-"color:#7d2b20;\n"
-"}\n"
-"QPushButton:click{\n"
-"\n"
-"background-color:#FCDBCE;\n"
-"}"));
         pushButton_12 = new QPushButton(tab);
         pushButton_12->setObjectName(QStringLiteral("pushButton_12"));
-        pushButton_12->setGeometry(QRect(700, 60, 75, 23));
+        pushButton_12->setGeometry(QRect(860, 10, 91, 31));
         pushButton_12->setStyleSheet(QLatin1String("QPushButton {\n"
 " background-color:#e86054;  /* Green */ \n"
 "  border: none;\n"
@@ -291,10 +229,13 @@ public:
 "\n"
 "background-color:#FCDBCE;\n"
 "}"));
-        pushButton_13 = new QPushButton(tab);
-        pushButton_13->setObjectName(QStringLiteral("pushButton_13"));
-        pushButton_13->setGeometry(QRect(700, 120, 75, 23));
-        pushButton_13->setStyleSheet(QLatin1String("QPushButton {\n"
+        tableView = new QTableView(tab);
+        tableView->setObjectName(QStringLiteral("tableView"));
+        tableView->setGeometry(QRect(290, 60, 491, 192));
+        pushButton_16 = new QPushButton(tab);
+        pushButton_16->setObjectName(QStringLiteral("pushButton_16"));
+        pushButton_16->setGeometry(QRect(600, 10, 91, 31));
+        pushButton_16->setStyleSheet(QLatin1String("QPushButton {\n"
 " background-color:#e86054;  /* Green */ \n"
 "  border: none;\n"
 " /* color: gray; \n"
@@ -312,10 +253,10 @@ public:
 "\n"
 "background-color:#FCDBCE;\n"
 "}"));
-        pushButton_14 = new QPushButton(tab);
-        pushButton_14->setObjectName(QStringLiteral("pushButton_14"));
-        pushButton_14->setGeometry(QRect(700, 180, 75, 23));
-        pushButton_14->setStyleSheet(QLatin1String("QPushButton {\n"
+        pushButton_10 = new QPushButton(tab);
+        pushButton_10->setObjectName(QStringLiteral("pushButton_10"));
+        pushButton_10->setGeometry(QRect(400, 280, 91, 31));
+        pushButton_10->setStyleSheet(QLatin1String("QPushButton {\n"
 " background-color:#e86054;  /* Green */ \n"
 "  border: none;\n"
 " /* color: gray; \n"
@@ -333,27 +274,52 @@ public:
 "\n"
 "background-color:#FCDBCE;\n"
 "}"));
+        pushButton_10->setCheckable(true);
+        pushButton_11 = new QPushButton(tab);
+        pushButton_11->setObjectName(QStringLiteral("pushButton_11"));
+        pushButton_11->setGeometry(QRect(560, 280, 91, 31));
+        pushButton_11->setStyleSheet(QLatin1String("QPushButton {\n"
+" background-color:#e86054;  /* Green */ \n"
+"  border: none;\n"
+" /* color: gray; \n"
+"  padding: 15px 32px;*/\n"
+"  text-align: center;\n"
+"  font-size: 16px;\n"
+"	border:9px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"\n"
+"background-color:#e0987b;\n"
+"color:#7d2b20;\n"
+"}\n"
+"QPushButton:click{\n"
+"\n"
+"background-color:#FCDBCE;\n"
+"}"));
+        gplot = new QCustomPlot(tab);
+        gplot->setObjectName(QStringLiteral("gplot"));
+        gplot->setGeometry(QRect(800, 50, 251, 281));
         tabWidget->addTab(tab, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName(QStringLiteral("tab_2"));
         groupBox = new QGroupBox(tab_2);
         groupBox->setObjectName(QStringLiteral("groupBox"));
-        groupBox->setGeometry(QRect(10, 40, 231, 211));
+        groupBox->setGeometry(QRect(10, 80, 231, 251));
         label = new QLabel(groupBox);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(20, 20, 47, 13));
         label_2 = new QLabel(groupBox);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(20, 60, 47, 13));
+        label_2->setGeometry(QRect(10, 60, 47, 13));
         label_3 = new QLabel(groupBox);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(20, 100, 47, 13));
+        label_3->setGeometry(QRect(10, 100, 71, 16));
         label_4 = new QLabel(groupBox);
         label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setGeometry(QRect(20, 140, 47, 13));
+        label_4->setGeometry(QRect(10, 140, 61, 16));
         pushButton = new QPushButton(groupBox);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(110, 170, 75, 23));
+        pushButton->setGeometry(QRect(60, 210, 101, 31));
         pushButton->setStyleSheet(QLatin1String("QPushButton {\n"
 " background-color:#e86054;  /* Green */ \n"
 "  border: none;\n"
@@ -402,9 +368,16 @@ public:
 "  border-radius: 4px;\n"
 "\n"
 "}"));
+        dateEdit_2 = new QDateEdit(groupBox);
+        dateEdit_2->setObjectName(QStringLiteral("dateEdit_2"));
+        dateEdit_2->setEnabled(true);
+        dateEdit_2->setGeometry(QRect(100, 100, 110, 22));
+        label_9 = new QLabel(groupBox);
+        label_9->setObjectName(QStringLiteral("label_9"));
+        label_9->setGeometry(QRect(10, 170, 81, 16));
         lineEdit_3 = new QLineEdit(groupBox);
         lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
-        lineEdit_3->setGeometry(QRect(100, 100, 113, 20));
+        lineEdit_3->setGeometry(QRect(100, 170, 113, 20));
         lineEdit_3->setStyleSheet(QLatin1String("QLineEdit\n"
 "{\n"
 "color:#000;\n"
@@ -414,7 +387,7 @@ public:
 "}"));
         lineEdit_5 = new QLineEdit(tab_2);
         lineEdit_5->setObjectName(QStringLiteral("lineEdit_5"));
-        lineEdit_5->setGeometry(QRect(320, 20, 121, 21));
+        lineEdit_5->setGeometry(QRect(320, 60, 121, 21));
         lineEdit_5->setStyleSheet(QLatin1String("QLineEdit\n"
 "{\n"
 "color:#000;\n"
@@ -424,63 +397,8 @@ public:
 "}"));
         pushButton_2 = new QPushButton(tab_2);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setGeometry(QRect(460, 10, 101, 31));
+        pushButton_2->setGeometry(QRect(460, 50, 101, 31));
         pushButton_2->setStyleSheet(QLatin1String("QPushButton {\n"
-" background-color:#e86054;  /* Green */ \n"
-"  border: none;\n"
-" /* color: gray; \n"
-"  padding: 15px 32px;*/\n"
-"  text-align: center;\n"
-"  font-size: 16px;\n"
-"	border:9px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"\n"
-"background-color:#e0987b;\n"
-"color:#7d2b20;\n"
-"}\n"
-"QPushButton:click{\n"
-"\n"
-"background-color:#FCDBCE;\n"
-"}"));
-        tableWidget = new QTableWidget(tab_2);
-        if (tableWidget->columnCount() < 4)
-            tableWidget->setColumnCount(4);
-        QTableWidgetItem *__qtablewidgetitem11 = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem11);
-        QTableWidgetItem *__qtablewidgetitem12 = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem12);
-        QTableWidgetItem *__qtablewidgetitem13 = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(2, __qtablewidgetitem13);
-        QTableWidgetItem *__qtablewidgetitem14 = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(3, __qtablewidgetitem14);
-        tableWidget->setObjectName(QStringLiteral("tableWidget"));
-        tableWidget->setGeometry(QRect(250, 50, 411, 192));
-        pushButton_3 = new QPushButton(tab_2);
-        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
-        pushButton_3->setGeometry(QRect(330, 260, 91, 41));
-        pushButton_3->setStyleSheet(QLatin1String("QPushButton {\n"
-" background-color:#e86054;  /* Green */ \n"
-"  border: none;\n"
-" /* color: gray; \n"
-"  padding: 15px 32px;*/\n"
-"  text-align: center;\n"
-"  font-size: 16px;\n"
-"	border:9px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"\n"
-"background-color:#e0987b;\n"
-"color:#7d2b20;\n"
-"}\n"
-"QPushButton:click{\n"
-"\n"
-"background-color:#FCDBCE;\n"
-"}"));
-        pushButton_4 = new QPushButton(tab_2);
-        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
-        pushButton_4->setGeometry(QRect(490, 260, 91, 41));
-        pushButton_4->setStyleSheet(QLatin1String("QPushButton {\n"
 " background-color:#e86054;  /* Green */ \n"
 "  border: none;\n"
 " /* color: gray; \n"
@@ -500,7 +418,7 @@ public:
 "}"));
         pushButton_5 = new QPushButton(tab_2);
         pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
-        pushButton_5->setGeometry(QRect(700, 50, 75, 23));
+        pushButton_5->setGeometry(QRect(850, 50, 111, 31));
         pushButton_5->setStyleSheet(QLatin1String("QPushButton {\n"
 " background-color:#e86054;  /* Green */ \n"
 "  border: none;\n"
@@ -521,7 +439,7 @@ public:
 "}"));
         pushButton_6 = new QPushButton(tab_2);
         pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
-        pushButton_6->setGeometry(QRect(700, 120, 75, 23));
+        pushButton_6->setGeometry(QRect(290, 310, 91, 41));
         pushButton_6->setStyleSheet(QLatin1String("QPushButton {\n"
 " background-color:#e86054;  /* Green */ \n"
 "  border: none;\n"
@@ -540,9 +458,79 @@ public:
 "\n"
 "background-color:#FCDBCE;\n"
 "}"));
+        tableView_2 = new QTableView(tab_2);
+        tableView_2->setObjectName(QStringLiteral("tableView_2"));
+        tableView_2->setGeometry(QRect(260, 90, 501, 192));
+        pushButton_15 = new QPushButton(tab_2);
+        pushButton_15->setObjectName(QStringLiteral("pushButton_15"));
+        pushButton_15->setGeometry(QRect(600, 50, 91, 31));
+        pushButton_15->setStyleSheet(QLatin1String("QPushButton {\n"
+" background-color:#e86054;  /* Green */ \n"
+"  border: none;\n"
+" /* color: gray; \n"
+"  padding: 15px 32px;*/\n"
+"  text-align: center;\n"
+"  font-size: 16px;\n"
+"	border:9px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"\n"
+"background-color:#e0987b;\n"
+"color:#7d2b20;\n"
+"}\n"
+"QPushButton:click{\n"
+"\n"
+"background-color:#FCDBCE;\n"
+"}"));
+        pushButton_3 = new QPushButton(tab_2);
+        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
+        pushButton_3->setGeometry(QRect(420, 310, 91, 41));
+        pushButton_3->setStyleSheet(QLatin1String("QPushButton {\n"
+" background-color:#e86054;  /* Green */ \n"
+"  border: none;\n"
+" /* color: gray; \n"
+"  padding: 15px 32px;*/\n"
+"  text-align: center;\n"
+"  font-size: 16px;\n"
+"	border:9px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"\n"
+"background-color:#e0987b;\n"
+"color:#7d2b20;\n"
+"}\n"
+"QPushButton:click{\n"
+"\n"
+"background-color:#FCDBCE;\n"
+"}"));
+        pushButton_3->setCheckable(true);
+        pushButton_4 = new QPushButton(tab_2);
+        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
+        pushButton_4->setGeometry(QRect(550, 310, 91, 41));
+        pushButton_4->setStyleSheet(QLatin1String("QPushButton {\n"
+" background-color:#e86054;  /* Green */ \n"
+"  border: none;\n"
+" /* color: gray; \n"
+"  padding: 15px 32px;*/\n"
+"  text-align: center;\n"
+"  font-size: 16px;\n"
+"	border:9px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"\n"
+"background-color:#e0987b;\n"
+"color:#7d2b20;\n"
+"}\n"
+"QPushButton:click{\n"
+"\n"
+"background-color:#FCDBCE;\n"
+"}"));
+        widget = new QCustomPlot(tab_2);
+        widget->setObjectName(QStringLiteral("widget"));
+        widget->setGeometry(QRect(780, 100, 271, 271));
         pushButton_7 = new QPushButton(tab_2);
         pushButton_7->setObjectName(QStringLiteral("pushButton_7"));
-        pushButton_7->setGeometry(QRect(730, 200, 75, 23));
+        pushButton_7->setGeometry(QRect(960, 10, 75, 23));
         pushButton_7->setStyleSheet(QLatin1String("QPushButton {\n"
 " background-color:#e86054;  /* Green */ \n"
 "  border: none;\n"
@@ -561,11 +549,35 @@ public:
 "\n"
 "background-color:#FCDBCE;\n"
 "}"));
+        pushButton_13 = new QPushButton(tab_2);
+        pushButton_13->setObjectName(QStringLiteral("pushButton_13"));
+        pushButton_13->setGeometry(QRect(860, 10, 75, 23));
+        pushButton_13->setStyleSheet(QLatin1String("QPushButton {\n"
+" background-color:#e86054;  /* Green */ \n"
+"  border: none;\n"
+" /* color: gray; \n"
+"  padding: 15px 32px;*/\n"
+"  text-align: center;\n"
+"  font-size: 16px;\n"
+"	border:9px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"\n"
+"background-color:#e0987b;\n"
+"color:#7d2b20;\n"
+"}\n"
+"QPushButton:click{\n"
+"\n"
+"background-color:#FCDBCE;\n"
+"}"));
         tabWidget->addTab(tab_2, QString());
+
+        horizontalLayout_2->addWidget(tabWidget);
+
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 798, 21));
+        menubar->setGeometry(QRect(0, 0, 1072, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QStringLiteral("statusbar"));
@@ -573,7 +585,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -586,36 +598,13 @@ public:
         pushButton_8->setText(QApplication::translate("MainWindow", "Ajouter", Q_NULLPTR));
         label_6->setText(QApplication::translate("MainWindow", "Dur\303\251e", Q_NULLPTR));
         label_5->setText(QApplication::translate("MainWindow", "ID", Q_NULLPTR));
-        label_7->setText(QApplication::translate("MainWindow", "date d'ajout", Q_NULLPTR));
+        label_7->setText(QApplication::translate("MainWindow", "Date d'ajout", Q_NULLPTR));
         label_8->setText(QApplication::translate("MainWindow", "Prix", Q_NULLPTR));
         pushButton_9->setText(QApplication::translate("MainWindow", "Rechercher", Q_NULLPTR));
-        QTableWidgetItem *___qtablewidgetitem = tableWidget_2->horizontalHeaderItem(0);
-        ___qtablewidgetitem->setText(QApplication::translate("MainWindow", "ID", Q_NULLPTR));
-        QTableWidgetItem *___qtablewidgetitem1 = tableWidget_2->horizontalHeaderItem(1);
-        ___qtablewidgetitem1->setText(QApplication::translate("MainWindow", "Dur\303\251e", Q_NULLPTR));
-        QTableWidgetItem *___qtablewidgetitem2 = tableWidget_2->horizontalHeaderItem(2);
-        ___qtablewidgetitem2->setText(QApplication::translate("MainWindow", "Date d'ajout", Q_NULLPTR));
-        QTableWidgetItem *___qtablewidgetitem3 = tableWidget_2->horizontalHeaderItem(3);
-        ___qtablewidgetitem3->setText(QApplication::translate("MainWindow", "Prix", Q_NULLPTR));
-        QTableWidgetItem *___qtablewidgetitem4 = tableWidget_2->verticalHeaderItem(0);
-        ___qtablewidgetitem4->setText(QApplication::translate("MainWindow", "1", Q_NULLPTR));
-        QTableWidgetItem *___qtablewidgetitem5 = tableWidget_2->verticalHeaderItem(1);
-        ___qtablewidgetitem5->setText(QApplication::translate("MainWindow", "2", Q_NULLPTR));
-        QTableWidgetItem *___qtablewidgetitem6 = tableWidget_2->verticalHeaderItem(2);
-        ___qtablewidgetitem6->setText(QApplication::translate("MainWindow", "3", Q_NULLPTR));
-        QTableWidgetItem *___qtablewidgetitem7 = tableWidget_2->verticalHeaderItem(3);
-        ___qtablewidgetitem7->setText(QApplication::translate("MainWindow", "4", Q_NULLPTR));
-        QTableWidgetItem *___qtablewidgetitem8 = tableWidget_2->verticalHeaderItem(4);
-        ___qtablewidgetitem8->setText(QApplication::translate("MainWindow", "5", Q_NULLPTR));
-        QTableWidgetItem *___qtablewidgetitem9 = tableWidget_2->verticalHeaderItem(5);
-        ___qtablewidgetitem9->setText(QApplication::translate("MainWindow", "6", Q_NULLPTR));
-        QTableWidgetItem *___qtablewidgetitem10 = tableWidget_2->verticalHeaderItem(6);
-        ___qtablewidgetitem10->setText(QApplication::translate("MainWindow", "8", Q_NULLPTR));
+        pushButton_12->setText(QApplication::translate("MainWindow", "Statistique", Q_NULLPTR));
+        pushButton_16->setText(QApplication::translate("MainWindow", "Tri", Q_NULLPTR));
         pushButton_10->setText(QApplication::translate("MainWindow", "Modifier", Q_NULLPTR));
         pushButton_11->setText(QApplication::translate("MainWindow", "Supprimer", Q_NULLPTR));
-        pushButton_12->setText(QApplication::translate("MainWindow", "Exporter", Q_NULLPTR));
-        pushButton_13->setText(QApplication::translate("MainWindow", "PushButton", Q_NULLPTR));
-        pushButton_14->setText(QApplication::translate("MainWindow", "PushButton", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "Publicite", Q_NULLPTR));
         groupBox->setTitle(QApplication::translate("MainWindow", "Ajouter reclamation", Q_NULLPTR));
         label->setText(QApplication::translate("MainWindow", "ID", Q_NULLPTR));
@@ -623,20 +612,15 @@ public:
         label_3->setText(QApplication::translate("MainWindow", "Date d'ajout", Q_NULLPTR));
         label_4->setText(QApplication::translate("MainWindow", "Description", Q_NULLPTR));
         pushButton->setText(QApplication::translate("MainWindow", "Ajouter", Q_NULLPTR));
+        label_9->setText(QApplication::translate("MainWindow", "Etat traitement", Q_NULLPTR));
         pushButton_2->setText(QApplication::translate("MainWindow", "Rechercher", Q_NULLPTR));
-        QTableWidgetItem *___qtablewidgetitem11 = tableWidget->horizontalHeaderItem(0);
-        ___qtablewidgetitem11->setText(QApplication::translate("MainWindow", "ID", Q_NULLPTR));
-        QTableWidgetItem *___qtablewidgetitem12 = tableWidget->horizontalHeaderItem(1);
-        ___qtablewidgetitem12->setText(QApplication::translate("MainWindow", "Produit ID", Q_NULLPTR));
-        QTableWidgetItem *___qtablewidgetitem13 = tableWidget->horizontalHeaderItem(2);
-        ___qtablewidgetitem13->setText(QApplication::translate("MainWindow", "Date d'ajout", Q_NULLPTR));
-        QTableWidgetItem *___qtablewidgetitem14 = tableWidget->horizontalHeaderItem(3);
-        ___qtablewidgetitem14->setText(QApplication::translate("MainWindow", "Description", Q_NULLPTR));
+        pushButton_5->setText(QApplication::translate("MainWindow", "Statistique", Q_NULLPTR));
+        pushButton_6->setText(QApplication::translate("MainWindow", "Exporter", Q_NULLPTR));
+        pushButton_15->setText(QApplication::translate("MainWindow", "Tri", Q_NULLPTR));
         pushButton_3->setText(QApplication::translate("MainWindow", "Modifier", Q_NULLPTR));
         pushButton_4->setText(QApplication::translate("MainWindow", "Supprimer", Q_NULLPTR));
-        pushButton_5->setText(QApplication::translate("MainWindow", "Exporter", Q_NULLPTR));
-        pushButton_6->setText(QApplication::translate("MainWindow", "Statistique", Q_NULLPTR));
-        pushButton_7->setText(QApplication::translate("MainWindow", "Imprimer", Q_NULLPTR));
+        pushButton_7->setText(QApplication::translate("MainWindow", "Mute", Q_NULLPTR));
+        pushButton_13->setText(QApplication::translate("MainWindow", "Play", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "Reclmation", Q_NULLPTR));
     } // retranslateUi
 

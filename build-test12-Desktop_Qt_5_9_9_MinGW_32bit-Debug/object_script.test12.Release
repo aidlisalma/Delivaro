@@ -1,0 +1,12 @@
+INPUT(
+./release\connection.o
+./release\main.o
+./release\mainwindow.o
+./release\publicite.o
+./release\qcustomplot.o
+./release\reclamation.o
+./release\statistique.o
+./release\moc_mainwindow.o
+./release\moc_qcustomplot.o
+./release\moc_statistique.o
+);
