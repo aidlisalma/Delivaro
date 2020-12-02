@@ -1,4 +1,5 @@
-QT       += core gui sql charts
+QT       += core gui sql charts multimedia
+
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -22,6 +23,8 @@ SOURCES += \
     connection.cpp \
     main.cpp \
     mywindow.cpp \
+    trajets.cpp \
+    voitures.cpp
 
 
 HEADERS += \
@@ -29,6 +32,8 @@ HEADERS += \
     carac_voiture.h \
     connection.h \
     mywindow.h \
+    trajets.h \
+    voitures.h
 
 
 FORMS += \

@@ -3,7 +3,18 @@
 #include<QString>
 #include"carac_trajet.h"
 #include<QVector>
-
+#include<QDebug>
+#include <QMainWindow>
+#include<QMessageBox>
+#include<QTableWidget>
+#include<QCompleter>
+#include<QComboBox>
+#include<QFile>
+#include <QTextStream>
+#include "connection.h"
+#include <QtCharts>
+#include <QMediaPlayer>
+#include<QUrl>
 class Carac_voiture
 {
 private:

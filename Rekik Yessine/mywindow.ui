@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>658</width>
-    <height>443</height>
+    <width>654</width>
+    <height>436</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -487,597 +487,208 @@ QCheckBox::indicator{
 }
 </string>
    </property>
-   <widget class="QTabWidget" name="tabWidget_2">
+   <widget class="QStackedWidget" name="stackedWidget_3">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>661</width>
-      <height>381</height>
+      <width>651</width>
+      <height>351</height>
      </rect>
     </property>
     <property name="currentIndex">
      <number>0</number>
     </property>
-    <widget class="QWidget" name="tab_4">
-     <attribute name="title">
-      <string>Gestion de Voitures</string>
-     </attribute>
-     <widget class="QStackedWidget" name="stackedWidget">
+    <widget class="QWidget" name="page">
+     <widget class="QPushButton" name="pushButton_2">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>651</width>
-        <height>351</height>
+        <x>290</x>
+        <y>160</y>
+        <width>91</width>
+        <height>22</height>
        </rect>
       </property>
-      <property name="styleSheet">
-       <string notr="true"/>
+      <property name="text">
+       <string>Log In</string>
       </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <widget class="QWidget" name="page_4">
-       <widget class="QTableWidget" name="table_modif">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>40</y>
-          <width>521</width>
-          <height>281</height>
-         </rect>
-        </property>
-        <column>
-         <property name="text">
-          <string>Matricule</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Type</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Capacité (T)</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Kilométrage (Km)</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Statut</string>
-         </property>
-        </column>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit">
-        <property name="geometry">
-         <rect>
-          <x>90</x>
-          <y>10</y>
-          <width>111</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_6">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>12</y>
-          <width>71</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Rechercher </string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="geometry">
-         <rect>
-          <x>570</x>
-          <y>280</y>
-          <width>80</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Intergration</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="page_3">
-       <widget class="QGroupBox" name="groupBox">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>30</y>
-          <width>491</width>
-          <height>321</height>
-         </rect>
-        </property>
-        <property name="title">
-         <string>Nouvelle Voiture</string>
-        </property>
-        <widget class="QComboBox" name="comboBox">
-         <property name="geometry">
-          <rect>
-           <x>180</x>
-           <y>70</y>
-           <width>111</width>
-           <height>21</height>
-          </rect>
-         </property>
-         <item>
-          <property name="text">
-           <string>Remorque</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Citerne</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Frigofrique</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Benne</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Porte-Char</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fourgon</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Ampliroll</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Plateau</string>
-          </property>
-         </item>
-        </widget>
-        <widget class="QSpinBox" name="spinBox_2">
-         <property name="geometry">
-          <rect>
-           <x>180</x>
-           <y>130</y>
-           <width>91</width>
-           <height>21</height>
-          </rect>
-         </property>
-         <property name="maximum">
-          <number>1000000</number>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_5">
-         <property name="geometry">
-          <rect>
-           <x>50</x>
-           <y>160</y>
-           <width>47</width>
-           <height>14</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Statut</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="matricule">
-         <property name="geometry">
-          <rect>
-           <x>180</x>
-           <y>40</y>
-           <width>113</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-        <widget class="QComboBox" name="comboBox_2">
-         <property name="geometry">
-          <rect>
-           <x>180</x>
-           <y>160</y>
-           <width>111</width>
-           <height>21</height>
-          </rect>
-         </property>
-         <item>
-          <property name="text">
-           <string>Disponible</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Indisponible</string>
-          </property>
-         </item>
-        </widget>
-        <widget class="QLabel" name="label">
-         <property name="geometry">
-          <rect>
-           <x>50</x>
-           <y>40</y>
-           <width>61</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>#Matricule</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_9">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
-         <property name="geometry">
-          <rect>
-           <x>136</x>
-           <y>250</y>
-           <width>91</width>
-           <height>23</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Valider</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_4">
-         <property name="geometry">
-          <rect>
-           <x>50</x>
-           <y>130</y>
-           <width>91</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Kilométrage (Km)</string>
-         </property>
-        </widget>
-        <widget class="QSpinBox" name="spinBox">
-         <property name="geometry">
-          <rect>
-           <x>180</x>
-           <y>100</y>
-           <width>42</width>
-           <height>21</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_3">
-         <property name="geometry">
-          <rect>
-           <x>50</x>
-           <y>100</y>
-           <width>71</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Capacité (T)</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_2">
-         <property name="geometry">
-          <rect>
-           <x>50</x>
-           <y>70</y>
-           <width>47</width>
-           <height>14</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Type</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_10">
-         <property name="geometry">
-          <rect>
-           <x>240</x>
-           <y>250</y>
-           <width>91</width>
-           <height>23</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Annuler</string>
-         </property>
-        </widget>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="page_6">
-       <widget class="QGroupBox" name="groupBox_3">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>10</y>
-          <width>591</width>
-          <height>331</height>
-         </rect>
-        </property>
-        <property name="title">
-         <string>Trajets effectué par cette Voiture</string>
-        </property>
-        <widget class="QTableWidget" name="table_trajeff">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>30</y>
-           <width>571</width>
-           <height>261</height>
-          </rect>
-         </property>
-         <column>
-          <property name="text">
-           <string>Numéro</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>Pays Chargement</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>Pays Livraison</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>Ville Chargement</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>Ville Livraison</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>Cdp Chargement</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>Cdp Livraison</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>Date Chargment</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>Date Livraison</string>
-          </property>
-         </column>
-        </widget>
-        <widget class="QPushButton" name="pushButton_3">
-         <property name="geometry">
-          <rect>
-           <x>260</x>
-           <y>300</y>
-           <width>80</width>
-           <height>22</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Retour</string>
-         </property>
-        </widget>
-       </widget>
-      </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_5">
-     <attribute name="title">
-      <string>Gestion de Trajets</string>
-     </attribute>
-     <widget class="QStackedWidget" name="stackedWidget_2">
+    <widget class="QWidget" name="page_2">
+     <widget class="QTabWidget" name="tabWidget_2">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>651</width>
-        <height>351</height>
+        <width>661</width>
+        <height>381</height>
        </rect>
       </property>
       <property name="currentIndex">
        <number>0</number>
       </property>
-      <widget class="QWidget" name="page_7">
-       <widget class="QTableWidget" name="table_trajet">
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>Gestion de Voitures</string>
+       </attribute>
+       <widget class="QStackedWidget" name="stackedWidget">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>40</y>
-          <width>611</width>
-          <height>291</height>
-         </rect>
-        </property>
-        <column>
-         <property name="text">
-          <string>Numéro</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Pays chargement</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Pays livraison</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Ville chargment</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Ville livraison</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Cdp chargement</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Cdp livraison</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Date chargement</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Date livraison</string>
-         </property>
-        </column>
-       </widget>
-       <widget class="QLabel" name="label_17">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>12</y>
-          <width>71</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Rechercher </string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_10">
-        <property name="geometry">
-         <rect>
-          <x>90</x>
-          <y>10</y>
-          <width>111</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="page_8">
-       <widget class="QGroupBox" name="groupBox_2">
-        <property name="geometry">
-         <rect>
-          <x>60</x>
+          <x>0</x>
           <y>0</y>
-          <width>501</width>
-          <height>331</height>
+          <width>651</width>
+          <height>351</height>
          </rect>
         </property>
-        <property name="title">
-         <string>Nouveau Trajet</string>
+        <property name="styleSheet">
+         <string notr="true"/>
         </property>
-        <widget class="QTabWidget" name="tabWidget">
-         <property name="geometry">
-          <rect>
-           <x>20</x>
-           <y>20</y>
-           <width>441</width>
-           <height>271</height>
-          </rect>
-         </property>
-         <property name="currentIndex">
-          <number>0</number>
-         </property>
-         <widget class="QWidget" name="tab">
-          <attribute name="title">
-           <string>Chargement</string>
-          </attribute>
-          <widget class="QLabel" name="label_7">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>40</y>
-             <width>61</width>
-             <height>16</height>
-            </rect>
-           </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="page_4">
+         <widget class="QTableWidget" name="table_modif">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>40</y>
+            <width>521</width>
+            <height>281</height>
+           </rect>
+          </property>
+          <column>
            <property name="text">
-            <string>#Numero</string>
+            <string>Matricule</string>
            </property>
-          </widget>
-          <widget class="QLabel" name="label_8">
+          </column>
+          <column>
+           <property name="text">
+            <string>Type</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Capacité (T)</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Kilométrage (Km)</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Statut</string>
+           </property>
+          </column>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>10</y>
+            <width>111</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_6">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>12</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Rechercher </string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_3">
+         <widget class="QGroupBox" name="groupBox">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>30</y>
+            <width>491</width>
+            <height>321</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Nouvelle Voiture</string>
+          </property>
+          <widget class="QComboBox" name="comboBox">
            <property name="geometry">
             <rect>
-             <x>50</x>
+             <x>180</x>
              <y>70</y>
-             <width>47</width>
-             <height>14</height>
+             <width>111</width>
+             <height>21</height>
             </rect>
            </property>
-           <property name="text">
-            <string>Pays</string>
-           </property>
+           <item>
+            <property name="text">
+             <string>Remorque</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Citerne</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Frigofrique</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Benne</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Porte-Char</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Fourgon</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Ampliroll</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Plateau</string>
+            </property>
+           </item>
           </widget>
-          <widget class="QLabel" name="label_9">
+          <widget class="QSpinBox" name="spinBox_2">
            <property name="geometry">
             <rect>
-             <x>50</x>
-             <y>100</y>
-             <width>47</width>
-             <height>14</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>Ville</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_10">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
+             <x>180</x>
              <y>130</y>
-             <width>71</width>
-             <height>16</height>
+             <width>91</width>
+             <height>21</height>
             </rect>
            </property>
-           <property name="text">
-            <string>Code Postal</string>
+           <property name="maximum">
+            <number>1000000</number>
            </property>
           </widget>
-          <widget class="QLabel" name="label_11">
+          <widget class="QLabel" name="label_5">
            <property name="geometry">
             <rect>
              <x>50</x>
@@ -1087,97 +698,13 @@ QCheckBox::indicator{
             </rect>
            </property>
            <property name="text">
-            <string>Date</string>
+            <string>Statut</string>
            </property>
           </widget>
-          <widget class="QLineEdit" name="lineEdit_2">
+          <widget class="QLineEdit" name="matricule">
            <property name="geometry">
             <rect>
-             <x>150</x>
-             <y>38</y>
-             <width>113</width>
-             <height>20</height>
-            </rect>
-           </property>
-           <property name="inputMask">
-            <string/>
-           </property>
-           <property name="maxLength">
-            <number>32767</number>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="lineEdit_3">
-           <property name="geometry">
-            <rect>
-             <x>150</x>
-             <y>68</y>
-             <width>113</width>
-             <height>20</height>
-            </rect>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="lineEdit_4">
-           <property name="geometry">
-            <rect>
-             <x>150</x>
-             <y>98</y>
-             <width>113</width>
-             <height>20</height>
-            </rect>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="lineEdit_5">
-           <property name="geometry">
-            <rect>
-             <x>150</x>
-             <y>128</y>
-             <width>113</width>
-             <height>20</height>
-            </rect>
-           </property>
-          </widget>
-          <widget class="QDateEdit" name="dateEdit">
-           <property name="geometry">
-            <rect>
-             <x>150</x>
-             <y>158</y>
-             <width>113</width>
-             <height>22</height>
-            </rect>
-           </property>
-           <property name="dateTime">
-            <datetime>
-             <hour>0</hour>
-             <minute>0</minute>
-             <second>0</second>
-             <year>2020</year>
-             <month>1</month>
-             <day>1</day>
-            </datetime>
-           </property>
-          </widget>
-         </widget>
-         <widget class="QWidget" name="tab_2">
-          <attribute name="title">
-           <string>Livraison</string>
-          </attribute>
-          <widget class="QLabel" name="label_12">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>132</y>
-             <width>47</width>
-             <height>14</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>Date</string>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="lineEdit_7">
-           <property name="geometry">
-            <rect>
-             <x>150</x>
+             <x>180</x>
              <y>40</y>
              <width>113</width>
              <height>20</height>
@@ -1187,173 +714,663 @@ QCheckBox::indicator{
             <string/>
            </property>
           </widget>
-          <widget class="QLineEdit" name="lineEdit_8">
+          <widget class="QComboBox" name="comboBox_2">
            <property name="geometry">
             <rect>
-             <x>150</x>
-             <y>70</y>
-             <width>113</width>
-             <height>20</height>
+             <x>180</x>
+             <y>160</y>
+             <width>111</width>
+             <height>21</height>
             </rect>
            </property>
+           <item>
+            <property name="text">
+             <string>Disponible</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Indisponible</string>
+            </property>
+           </item>
           </widget>
-          <widget class="QLabel" name="label_13">
+          <widget class="QLabel" name="label">
            <property name="geometry">
             <rect>
              <x>50</x>
-             <y>102</y>
+             <y>40</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>#Matricule</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_9">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>136</x>
+             <y>250</y>
+             <width>91</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Valider</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_4">
+           <property name="geometry">
+            <rect>
+             <x>50</x>
+             <y>130</y>
+             <width>91</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Kilométrage (Km)</string>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinBox">
+           <property name="geometry">
+            <rect>
+             <x>180</x>
+             <y>100</y>
+             <width>42</width>
+             <height>21</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_3">
+           <property name="geometry">
+            <rect>
+             <x>50</x>
+             <y>100</y>
              <width>71</width>
              <height>16</height>
             </rect>
            </property>
            <property name="text">
-            <string>Code Postal</string>
+            <string>Capacité (T)</string>
            </property>
           </widget>
-          <widget class="QLineEdit" name="lineEdit_9">
-           <property name="geometry">
-            <rect>
-             <x>150</x>
-             <y>100</y>
-             <width>113</width>
-             <height>20</height>
-            </rect>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_14">
+          <widget class="QLabel" name="label_2">
            <property name="geometry">
             <rect>
              <x>50</x>
-             <y>42</y>
+             <y>70</y>
              <width>47</width>
              <height>14</height>
             </rect>
            </property>
            <property name="text">
-            <string>Pays</string>
+            <string>Type</string>
            </property>
           </widget>
-          <widget class="QDateEdit" name="dateEdit_2">
+          <widget class="QPushButton" name="pushButton_10">
            <property name="geometry">
             <rect>
-             <x>150</x>
-             <y>130</y>
-             <width>113</width>
-             <height>22</height>
-            </rect>
-           </property>
-           <property name="dateTime">
-            <datetime>
-             <hour>0</hour>
-             <minute>0</minute>
-             <second>0</second>
-             <year>2020</year>
-             <month>1</month>
-             <day>1</day>
-            </datetime>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_15">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>72</y>
-             <width>47</width>
-             <height>14</height>
+             <x>240</x>
+             <y>250</y>
+             <width>91</width>
+             <height>23</height>
             </rect>
            </property>
            <property name="text">
-            <string>Ville</string>
+            <string>Annuler</string>
            </property>
           </widget>
          </widget>
-         <widget class="QWidget" name="tab_3">
-          <attribute name="title">
-           <string>Affectation</string>
-          </attribute>
-          <widget class="QLabel" name="label_16">
+        </widget>
+        <widget class="QWidget" name="page_6">
+         <widget class="QGroupBox" name="groupBox_3">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>591</width>
+            <height>331</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Trajets effectué par cette Voiture</string>
+          </property>
+          <widget class="QTableWidget" name="table_trajeff">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>571</width>
+             <height>261</height>
+            </rect>
+           </property>
+           <column>
+            <property name="text">
+             <string>Numéro</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Pays Chargement</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Pays Livraison</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Ville Chargement</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Ville Livraison</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Cdp Chargement</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Cdp Livraison</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Date Chargment</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Date Livraison</string>
+            </property>
+           </column>
+          </widget>
+          <widget class="QPushButton" name="pushButton_3">
+           <property name="geometry">
+            <rect>
+             <x>260</x>
+             <y>300</y>
+             <width>80</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Retour</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>Gestion de Trajets</string>
+       </attribute>
+       <widget class="QStackedWidget" name="stackedWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>651</width>
+          <height>351</height>
+         </rect>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="page_7">
+         <widget class="QTableWidget" name="table_trajet">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>40</y>
+            <width>611</width>
+            <height>291</height>
+           </rect>
+          </property>
+          <column>
+           <property name="text">
+            <string>Numéro</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Pays chargement</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Pays livraison</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Ville chargment</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Ville livraison</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Cdp chargement</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Cdp livraison</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Date chargement</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Date livraison</string>
+           </property>
+          </column>
+         </widget>
+         <widget class="QLabel" name="label_17">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>12</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Rechercher </string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_10">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>10</y>
+            <width>111</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_8">
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>0</y>
+            <width>501</width>
+            <height>331</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Nouveau Trajet</string>
+          </property>
+          <widget class="QTabWidget" name="tabWidget">
            <property name="geometry">
             <rect>
              <x>20</x>
-             <y>10</y>
-             <width>71</width>
-             <height>16</height>
+             <y>20</y>
+             <width>441</width>
+             <height>271</height>
+            </rect>
+           </property>
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="tab">
+            <attribute name="title">
+             <string>Chargement</string>
+            </attribute>
+            <widget class="QLabel" name="label_7">
+             <property name="geometry">
+              <rect>
+               <x>50</x>
+               <y>40</y>
+               <width>61</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>#Numero</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_8">
+             <property name="geometry">
+              <rect>
+               <x>50</x>
+               <y>70</y>
+               <width>47</width>
+               <height>14</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Pays</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_9">
+             <property name="geometry">
+              <rect>
+               <x>50</x>
+               <y>100</y>
+               <width>47</width>
+               <height>14</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Ville</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_10">
+             <property name="geometry">
+              <rect>
+               <x>50</x>
+               <y>130</y>
+               <width>71</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Code Postal</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_11">
+             <property name="geometry">
+              <rect>
+               <x>50</x>
+               <y>160</y>
+               <width>47</width>
+               <height>14</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Date</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="lineEdit_2">
+             <property name="geometry">
+              <rect>
+               <x>150</x>
+               <y>38</y>
+               <width>113</width>
+               <height>20</height>
+              </rect>
+             </property>
+             <property name="inputMask">
+              <string/>
+             </property>
+             <property name="maxLength">
+              <number>32767</number>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="lineEdit_3">
+             <property name="geometry">
+              <rect>
+               <x>150</x>
+               <y>68</y>
+               <width>113</width>
+               <height>20</height>
+              </rect>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="lineEdit_4">
+             <property name="geometry">
+              <rect>
+               <x>150</x>
+               <y>98</y>
+               <width>113</width>
+               <height>20</height>
+              </rect>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="lineEdit_5">
+             <property name="geometry">
+              <rect>
+               <x>150</x>
+               <y>128</y>
+               <width>113</width>
+               <height>20</height>
+              </rect>
+             </property>
+            </widget>
+            <widget class="QDateEdit" name="dateEdit">
+             <property name="geometry">
+              <rect>
+               <x>150</x>
+               <y>158</y>
+               <width>113</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="dateTime">
+              <datetime>
+               <hour>0</hour>
+               <minute>0</minute>
+               <second>0</second>
+               <year>2020</year>
+               <month>1</month>
+               <day>1</day>
+              </datetime>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="tab_2">
+            <attribute name="title">
+             <string>Livraison</string>
+            </attribute>
+            <widget class="QLabel" name="label_12">
+             <property name="geometry">
+              <rect>
+               <x>50</x>
+               <y>132</y>
+               <width>47</width>
+               <height>14</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Date</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="lineEdit_7">
+             <property name="geometry">
+              <rect>
+               <x>150</x>
+               <y>40</y>
+               <width>113</width>
+               <height>20</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="lineEdit_8">
+             <property name="geometry">
+              <rect>
+               <x>150</x>
+               <y>70</y>
+               <width>113</width>
+               <height>20</height>
+              </rect>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_13">
+             <property name="geometry">
+              <rect>
+               <x>50</x>
+               <y>102</y>
+               <width>71</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Code Postal</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="lineEdit_9">
+             <property name="geometry">
+              <rect>
+               <x>150</x>
+               <y>100</y>
+               <width>113</width>
+               <height>20</height>
+              </rect>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_14">
+             <property name="geometry">
+              <rect>
+               <x>50</x>
+               <y>42</y>
+               <width>47</width>
+               <height>14</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Pays</string>
+             </property>
+            </widget>
+            <widget class="QDateEdit" name="dateEdit_2">
+             <property name="geometry">
+              <rect>
+               <x>150</x>
+               <y>130</y>
+               <width>113</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="dateTime">
+              <datetime>
+               <hour>0</hour>
+               <minute>0</minute>
+               <second>0</second>
+               <year>2020</year>
+               <month>1</month>
+               <day>1</day>
+              </datetime>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_15">
+             <property name="geometry">
+              <rect>
+               <x>50</x>
+               <y>72</y>
+               <width>47</width>
+               <height>14</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Ville</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="tab_3">
+            <attribute name="title">
+             <string>Affectation</string>
+            </attribute>
+            <widget class="QLabel" name="label_16">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>10</y>
+               <width>71</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Rechercher</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="lineEdit_6">
+             <property name="geometry">
+              <rect>
+               <x>100</x>
+               <y>10</y>
+               <width>113</width>
+               <height>20</height>
+              </rect>
+             </property>
+            </widget>
+            <widget class="QTableWidget" name="tabledispo">
+             <property name="geometry">
+              <rect>
+               <x>7</x>
+               <y>40</y>
+               <width>421</width>
+               <height>201</height>
+              </rect>
+             </property>
+             <column>
+              <property name="text">
+               <string>Matricule</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Type</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Capacité (T)</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Kilométrage (Km)</string>
+              </property>
+             </column>
+            </widget>
+           </widget>
+          </widget>
+          <widget class="QPushButton" name="pushButton_4">
+           <property name="geometry">
+            <rect>
+             <x>180</x>
+             <y>300</y>
+             <width>75</width>
+             <height>23</height>
             </rect>
            </property>
            <property name="text">
-            <string>Rechercher</string>
+            <string>Annuler</string>
            </property>
           </widget>
-          <widget class="QLineEdit" name="lineEdit_6">
+          <widget class="QPushButton" name="pushButton_6">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
            <property name="geometry">
             <rect>
-             <x>100</x>
-             <y>10</y>
-             <width>113</width>
-             <height>20</height>
+             <x>270</x>
+             <y>300</y>
+             <width>81</width>
+             <height>23</height>
             </rect>
            </property>
-          </widget>
-          <widget class="QTableWidget" name="tabledispo">
-           <property name="geometry">
-            <rect>
-             <x>7</x>
-             <y>40</y>
-             <width>421</width>
-             <height>201</height>
-            </rect>
+           <property name="text">
+            <string>Valider</string>
            </property>
-           <column>
-            <property name="text">
-             <string>Matricule</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>Type</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>Capacité (T)</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>Kilométrage (Km)</string>
-            </property>
-           </column>
           </widget>
          </widget>
-        </widget>
-        <widget class="QPushButton" name="pushButton_4">
-         <property name="geometry">
-          <rect>
-           <x>180</x>
-           <y>300</y>
-           <width>75</width>
-           <height>23</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Annuler</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_6">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="geometry">
-          <rect>
-           <x>270</x>
-           <y>300</y>
-           <width>81</width>
-           <height>23</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Valider</string>
-         </property>
         </widget>
        </widget>
       </widget>
@@ -1367,7 +1384,7 @@ QCheckBox::indicator{
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>658</width>
+     <width>654</width>
      <height>21</height>
     </rect>
    </property>
