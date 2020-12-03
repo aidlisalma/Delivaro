@@ -14,13 +14,14 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QMainWindow{
+   <string notr="true">QWidget {
 border:4px;
 background-color:#FFEEE7;
-border-color:#666666;
+//border-color:#666666;
 border-radius:4px;
 
-}</string>
+}
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_4">
@@ -87,18 +88,7 @@ background-color:#FCDBCE;
     <item row="1" column="0">
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="styleSheet">
-       <string notr="true">
-QWidget
-{
-    background-color: #FFEEE7;
-}
-
-
-QTableView {
-    selection-background-color: qlineargradient(x1: 0, y1: 0, x2: 0.5, y2: 0.5,
-                                stop: 0 #FF92BB, stop: 1 white);
-}
-</string>
+       <string notr="true"/>
       </property>
       <property name="currentIndex">
        <number>1</number>
@@ -224,15 +214,29 @@ background-color:#FCDBCE;
              <layout class="QVBoxLayout" name="verticalLayout_2">
               <item>
                <widget class="QToolBox" name="toolBox_colis">
+                <property name="autoFillBackground">
+                 <bool>false</bool>
+                </property>
                 <property name="styleSheet">
-                 <string notr="true">QToolBox {
+                 <string notr="true">QToolBox{
 border:4px;
 background-color:#FFEEE7;
 border-color:#666666;
-border-radius:4px;
-}
-QToolButton::menu-button {
-  background:#FFEEE7;
+border-radius:4px;}
+
+QToolBox::tab {
+background-color:#e86054;  /* Green */ 
+  border: none;
+ /* color: gray; 
+  padding: 15px 32px;*/
+  text-align: center;
+  font-size: 16px;
+	border:9px;}
+QToolBox::page {
+	border:4px;
+background-color:#FFEEE7;
+border-color:#666666;
+border-radius:4px
 }</string>
                 </property>
                 <property name="currentIndex">
@@ -371,6 +375,126 @@ background-color:#FCDBCE;
                     <height>21</height>
                    </rect>
                   </property>
+                  <property name="palette">
+                   <palette>
+                    <active>
+                     <colorrole role="Button">
+                      <brush brushstyle="SolidPattern">
+                       <color alpha="255">
+                        <red>232</red>
+                        <green>96</green>
+                        <blue>84</blue>
+                       </color>
+                      </brush>
+                     </colorrole>
+                     <colorrole role="Base">
+                      <brush brushstyle="SolidPattern">
+                       <color alpha="255">
+                        <red>232</red>
+                        <green>96</green>
+                        <blue>84</blue>
+                       </color>
+                      </brush>
+                     </colorrole>
+                     <colorrole role="Window">
+                      <brush brushstyle="SolidPattern">
+                       <color alpha="255">
+                        <red>232</red>
+                        <green>96</green>
+                        <blue>84</blue>
+                       </color>
+                      </brush>
+                     </colorrole>
+                    </active>
+                    <inactive>
+                     <colorrole role="Button">
+                      <brush brushstyle="SolidPattern">
+                       <color alpha="255">
+                        <red>232</red>
+                        <green>96</green>
+                        <blue>84</blue>
+                       </color>
+                      </brush>
+                     </colorrole>
+                     <colorrole role="Base">
+                      <brush brushstyle="SolidPattern">
+                       <color alpha="255">
+                        <red>232</red>
+                        <green>96</green>
+                        <blue>84</blue>
+                       </color>
+                      </brush>
+                     </colorrole>
+                     <colorrole role="Window">
+                      <brush brushstyle="SolidPattern">
+                       <color alpha="255">
+                        <red>232</red>
+                        <green>96</green>
+                        <blue>84</blue>
+                       </color>
+                      </brush>
+                     </colorrole>
+                    </inactive>
+                    <disabled>
+                     <colorrole role="Button">
+                      <brush brushstyle="SolidPattern">
+                       <color alpha="255">
+                        <red>232</red>
+                        <green>96</green>
+                        <blue>84</blue>
+                       </color>
+                      </brush>
+                     </colorrole>
+                     <colorrole role="Base">
+                      <brush brushstyle="SolidPattern">
+                       <color alpha="255">
+                        <red>232</red>
+                        <green>96</green>
+                        <blue>84</blue>
+                       </color>
+                      </brush>
+                     </colorrole>
+                     <colorrole role="Window">
+                      <brush brushstyle="SolidPattern">
+                       <color alpha="255">
+                        <red>232</red>
+                        <green>96</green>
+                        <blue>84</blue>
+                       </color>
+                      </brush>
+                     </colorrole>
+                    </disabled>
+                   </palette>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>-1</pointsize>
+                    <stylestrategy>PreferDefault</stylestrategy>
+                   </font>
+                  </property>
+                  <property name="autoFillBackground">
+                   <bool>false</bool>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QComboBox {
+ background-color:#e86054;  /* Green */ 
+  border: none;
+ /* color: gray; 
+  padding: 15px 32px;*/
+  text-align: center;
+  font-size: 16px;
+	border:9px;
+}
+QComboBox:hover{
+
+background-color:#e0987b;
+color:#7d2b20;
+}
+QPushButton:click{
+
+background-color:#FCDBCE;
+}</string>
+                  </property>
                   <item>
                    <property name="text">
                     <string>ASC</string>
@@ -390,6 +514,26 @@ background-color:#FCDBCE;
                     <width>151</width>
                     <height>28</height>
                    </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+ background-color:#e86054;  /* Green */ 
+  border: none;
+ /* color: gray; 
+  padding: 15px 32px;*/
+  text-align: center;
+  font-size: 16px;
+	border:9px;
+}
+QPushButton:hover{
+
+background-color:#e0987b;
+color:#7d2b20;
+}
+QPushButton:click{
+
+background-color:#FCDBCE;
+}</string>
                   </property>
                   <property name="text">
                    <string>Trier</string>
@@ -514,7 +658,16 @@ background-color:#FCDBCE;
                 </widget>
                </item>
                <item>
-                <widget class="QDateEdit" name="dateEdit_livraison"/>
+                <widget class="QDateEdit" name="dateEdit_livraison">
+                 <property name="font">
+                  <font>
+                   <kerning>true</kerning>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                </widget>
                </item>
               </layout>
              </item>
@@ -556,7 +709,15 @@ background-color:#FCDBCE;
                 </widget>
                </item>
                <item>
-                <widget class="QLineEdit" name="lineEdit_expediteur"/>
+                <widget class="QLineEdit" name="lineEdit_expediteur">
+                 <property name="palette">
+                  <palette>
+                   <active/>
+                   <inactive/>
+                   <disabled/>
+                  </palette>
+                 </property>
+                </widget>
                </item>
               </layout>
              </item>
@@ -1063,6 +1224,31 @@ background-color:#FCDBCE;
          <layout class="QVBoxLayout" name="verticalLayout_6">
           <item>
            <widget class="QToolBox" name="toolBox_part">
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QToolBox{
+border:4px;
+background-color:#FFEEE7;
+border-color:#666666;
+border-radius:4px;}
+
+QToolBox::tab {
+background-color:#e86054;  /* Green */ 
+  border: none;
+ /* color: gray; 
+  padding: 15px 32px;*/
+  text-align: center;
+  font-size: 16px;
+	border:9px;}
+QToolBox::page {
+	border:4px;
+background-color:#FFEEE7;
+border-color:#666666;
+border-radius:4px
+}</string>
+            </property>
             <property name="currentIndex">
              <number>0</number>
             </property>
