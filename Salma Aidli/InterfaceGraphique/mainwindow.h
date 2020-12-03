@@ -5,9 +5,12 @@
 #include <QItemSelectionModel>
 #include <QSqlTableModel>
 #include <QDebug>
+#include <QPropertyAnimation>
+#include <QSound>
 #include "partenaire.h"
 #include "colis.h"
 #include "ui_mainwindow.h"
+
 
 
 QT_BEGIN_NAMESPACE
@@ -43,13 +46,29 @@ private slots:
 
     void on_pushButton_tabpartenaires_clicked();
 
-    void on_pushButton_StatistiquesColis_clicked();
+   // void on_pushButton_StatistiquesColis_clicked();
 
     void on_pushButton_triColis_clicked();
+
+    void on_lineEdit_recherche_colis_textChanged(const QString &arg1);
+
+    void on_pushButton_export_partenaires_clicked();
+
+    void on_pushButton_supp_Partenaires_clicked();
+
+    void on_pushButton_Statistiques_partenaires_clicked();
+
+    void on_contract_colis_clicked();
 
 private:
     Ui::MainWindow *ui;
     Colis tmpcolis;
     partenaire tmp_partenaires;
+        QRegExp nom_regex;
+        QRegExp identifiant_regex;
+        QRegExp nombre_commandes_regex;
+        QRegExp type_produit_regex;
+        QPropertyAnimation *contract_animation;
+          QPropertyAnimation *expand_animation;
 };
 #endif // MAINWINDOW_H

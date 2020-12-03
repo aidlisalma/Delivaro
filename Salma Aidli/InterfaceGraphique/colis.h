@@ -35,11 +35,12 @@ public:
     bool ajouter();
     QSqlQueryModel *afficher();
     bool supprimer(int);
-   // QSqlQueryModel * trier_colis();
     QSqlQueryModel * chercher_colis(int num);
     void exporter(QTableView *table);
-    QVector<double> getData();
-    QSqlQueryModel *trier(QString critere,QString AD);
+    //QVector<double> getData();
+    QSqlQueryModel *trier(QString ,QString );
+    QSqlQueryModel *recherche_avancee(QString );
+
 
 
 };

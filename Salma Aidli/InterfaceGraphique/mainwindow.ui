@@ -105,111 +105,12 @@ QTableView {
       </property>
       <widget class="QWidget" name="stackedWidgetPage1">
        <layout class="QGridLayout" name="gridLayout_3">
-        <item row="0" column="0" rowspan="2">
-         <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item row="1" column="2">
+         <layout class="QVBoxLayout" name="verticalLayout_3">
           <item>
-           <widget class="QGroupBox" name="groupBox_2">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>431</height>
-             </size>
-            </property>
+           <widget class="QPushButton" name="pushButton_StatistiquesColis">
             <property name="styleSheet">
-             <string notr="true"/>
-            </property>
-            <property name="title">
-             <string>Ajouter Colis</string>
-            </property>
-            <layout class="QGridLayout" name="gridLayout">
-             <item row="1" column="0">
-              <layout class="QHBoxLayout" name="horizontalLayout_15">
-               <item>
-                <widget class="QLabel" name="label_dateliv">
-                 <property name="font">
-                  <font>
-                   <family>Lucida Sans</family>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>Date de livraison</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QDateEdit" name="dateEdit_livraison"/>
-               </item>
-              </layout>
-             </item>
-             <item row="2" column="0">
-              <layout class="QHBoxLayout" name="horizontalLayout_16">
-               <item>
-                <widget class="QLabel" name="label_adresseliv">
-                 <property name="font">
-                  <font>
-                   <family>Lucida Sans</family>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>Adresse de livraison</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="lineEdit_adresseliv"/>
-               </item>
-              </layout>
-             </item>
-             <item row="3" column="0">
-              <layout class="QHBoxLayout" name="horizontalLayout_17">
-               <item>
-                <widget class="QLabel" name="label_expediteur">
-                 <property name="font">
-                  <font>
-                   <family>Lucida Sans</family>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>ID Partenaire</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="lineEdit_expediteur"/>
-               </item>
-              </layout>
-             </item>
-             <item row="4" column="0">
-              <layout class="QHBoxLayout" name="horizontalLayout_18">
-               <item>
-                <widget class="QLabel" name="label_destinataire">
-                 <property name="font">
-                  <font>
-                   <family>Lucida Sans</family>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>ID client</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="lineEdit_destinataire"/>
-               </item>
-              </layout>
-             </item>
-             <item row="5" column="0">
-              <widget class="QPushButton" name="pushButton_ajouterColis">
-               <property name="styleSheet">
-                <string notr="true">QPushButton {
+             <string notr="true">QPushButton {
  background-color:#e86054;  /* Green */ 
   border: none;
  /* color: gray; 
@@ -228,100 +129,64 @@ QPushButton:click{
 background-color:#FCDBCE;
 }
 </string>
-               </property>
-               <property name="text">
-                <string>Ajouter</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="0">
-              <layout class="QHBoxLayout" name="horizontalLayout_5">
-               <item>
-                <widget class="QLabel" name="label_numcolis">
-                 <property name="font">
-                  <font>
-                   <family>Lucida Sans</family>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>Numéro de la colis</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="lineEdit_numcolis"/>
-               </item>
-              </layout>
-             </item>
-            </layout>
+            </property>
+            <property name="text">
+             <string>Statistiques </string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_22">
-            <item>
-             <widget class="QPushButton" name="pushButton_modifier_colis">
-              <property name="styleSheet">
-               <string notr="true">QPushButton {
- background-color:#e86054;  /* Green */ 
-  border: none;
- /* color: gray; 
-  padding: 15px 32px;*/
-  text-align: center;
-  font-size: 16px;
-	border:9px;
-}
-QPushButton:hover{
-
-background-color:#e0987b;
-color:#7d2b20;
-}
-QPushButton:click{
-
-background-color:#FCDBCE;
-}
-</string>
-              </property>
-              <property name="text">
-               <string>Modifier</string>
-              </property>
-              <property name="checkable">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="pushButton_supprimer_colis">
-              <property name="styleSheet">
-               <string notr="true">QPushButton {
- background-color:#e86054;  /* Green */ 
-  border: none;
- /* color: gray; 
-  padding: 15px 32px;*/
-  text-align: center;
-  font-size: 16px;
-	border:9px;
-}
-QPushButton:hover{
-
-background-color:#e0987b;
-color:#7d2b20;
-}
-QPushButton:click{
-
-background-color:#FCDBCE;
-}
-</string>
-              </property>
-              <property name="text">
-               <string>Supprimer</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
+           <layout class="QHBoxLayout" name="horizontalLayout_4"/>
+          </item>
+          <item>
+           <widget class="QCustomPlot" name="statcolis" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>400</height>
+             </size>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_3"/>
+           </widget>
           </item>
          </layout>
+        </item>
+        <item row="0" column="2">
+         <widget class="QCommandLinkButton" name="commandLinkButton">
+          <property name="maximumSize">
+           <size>
+            <width>101</width>
+            <height>41</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+ background-color:#e86054;  /* Green */ 
+  border: none;
+ /* color: gray; 
+  padding: 15px 32px;*/
+  text-align: center;
+  font-size: 16px;
+	border:9px;
+}
+QPushButton:hover{
+
+background-color:#e0987b;
+color:#7d2b20;
+}
+QPushButton:click{
+
+background-color:#FCDBCE;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Retour</string>
+          </property>
+         </widget>
         </item>
         <item row="0" column="1" rowspan="2">
          <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -371,7 +236,7 @@ QToolButton::menu-button {
 }</string>
                 </property>
                 <property name="currentIndex">
-                 <number>1</number>
+                 <number>0</number>
                 </property>
                 <widget class="QWidget" name="page_7">
                  <property name="geometry">
@@ -615,46 +480,111 @@ background-color:#FCDBCE;
           </item>
          </layout>
         </item>
-        <item row="0" column="2">
-         <widget class="QCommandLinkButton" name="commandLinkButton">
-          <property name="maximumSize">
-           <size>
-            <width>101</width>
-            <height>41</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
- background-color:#e86054;  /* Green */ 
-  border: none;
- /* color: gray; 
-  padding: 15px 32px;*/
-  text-align: center;
-  font-size: 16px;
-	border:9px;
-}
-QPushButton:hover{
-
-background-color:#e0987b;
-color:#7d2b20;
-}
-QPushButton:click{
-
-background-color:#FCDBCE;
-}
-</string>
-          </property>
-          <property name="text">
-           <string>Retour</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="2">
-         <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item row="0" column="0" rowspan="2">
+         <layout class="QVBoxLayout" name="verticalLayout_5">
           <item>
-           <widget class="QPushButton" name="pushButton_StatistiquesColis">
+           <widget class="QGroupBox" name="groupBox_2">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>431</height>
+             </size>
+            </property>
             <property name="styleSheet">
-             <string notr="true">QPushButton {
+             <string notr="true"/>
+            </property>
+            <property name="title">
+             <string>Ajouter Colis</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout">
+             <item row="1" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_15">
+               <item>
+                <widget class="QLabel" name="label_dateliv">
+                 <property name="font">
+                  <font>
+                   <family>Lucida Sans</family>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Date de livraison</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QDateEdit" name="dateEdit_livraison"/>
+               </item>
+              </layout>
+             </item>
+             <item row="2" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_16">
+               <item>
+                <widget class="QLabel" name="label_adresseliv">
+                 <property name="font">
+                  <font>
+                   <family>Lucida Sans</family>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Adresse de livraison</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEdit_adresseliv"/>
+               </item>
+              </layout>
+             </item>
+             <item row="3" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_17">
+               <item>
+                <widget class="QLabel" name="label_expediteur">
+                 <property name="font">
+                  <font>
+                   <family>Lucida Sans</family>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>ID Partenaire</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEdit_expediteur"/>
+               </item>
+              </layout>
+             </item>
+             <item row="4" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_18">
+               <item>
+                <widget class="QLabel" name="label_destinataire">
+                 <property name="font">
+                  <font>
+                   <family>Lucida Sans</family>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>ID client</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEdit_destinataire"/>
+               </item>
+              </layout>
+             </item>
+             <item row="5" column="0">
+              <widget class="QPushButton" name="pushButton_ajouterColis">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
  background-color:#e86054;  /* Green */ 
   border: none;
  /* color: gray; 
@@ -673,40 +603,126 @@ QPushButton:click{
 background-color:#FCDBCE;
 }
 </string>
-            </property>
-            <property name="text">
-             <string>Statistiques</string>
-            </property>
+               </property>
+               <property name="text">
+                <string>Ajouter</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <item>
+                <widget class="QLabel" name="label_numcolis">
+                 <property name="font">
+                  <font>
+                   <family>Lucida Sans</family>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Numéro de la colis</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEdit_numcolis"/>
+               </item>
+              </layout>
+             </item>
+            </layout>
            </widget>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <layout class="QHBoxLayout" name="horizontalLayout_22">
             <item>
-             <widget class="QRadioButton" name="radioButton_4">
+             <widget class="QPushButton" name="pushButton_modifier_colis">
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+ background-color:#e86054;  /* Green */ 
+  border: none;
+ /* color: gray; 
+  padding: 15px 32px;*/
+  text-align: center;
+  font-size: 16px;
+	border:9px;
+}
+QPushButton:hover{
+
+background-color:#e0987b;
+color:#7d2b20;
+}
+QPushButton:click{
+
+background-color:#FCDBCE;
+}
+</string>
+              </property>
               <property name="text">
-               <string>Destinataire</string>
+               <string>Modifier</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QRadioButton" name="radioButton_5">
+             <widget class="QPushButton" name="contract_colis">
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+ background-color:#e86054;  /* Green */ 
+  border: none;
+ /* color: gray; 
+  padding: 15px 32px;*/
+  text-align: center;
+  font-size: 16px;
+	border:9px;
+}
+QPushButton:hover{
+
+background-color:#e0987b;
+color:#7d2b20;
+}
+QPushButton:click{
+
+background-color:#FCDBCE;
+}
+</string>
+              </property>
               <property name="text">
-               <string>Adresse</string>
+               <string>Contract</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_supprimer_colis">
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+ background-color:#e86054;  /* Green */ 
+  border: none;
+ /* color: gray; 
+  padding: 15px 32px;*/
+  text-align: center;
+  font-size: 16px;
+	border:9px;
+}
+QPushButton:hover{
+
+background-color:#e0987b;
+color:#7d2b20;
+}
+QPushButton:click{
+
+background-color:#FCDBCE;
+}
+</string>
+              </property>
+              <property name="text">
+               <string>Supprimer</string>
               </property>
              </widget>
             </item>
            </layout>
-          </item>
-          <item>
-           <widget class="QCustomPlot" name="statcolis" native="true">
-            <property name="minimumSize">
-             <size>
-              <width>300</width>
-              <height>400</height>
-             </size>
-            </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_3"/>
-           </widget>
           </item>
          </layout>
         </item>
@@ -818,7 +834,52 @@ background-color:#FCDBCE;
                 </widget>
                </item>
                <item>
-                <widget class="QLineEdit" name="lineEdit_produit"/>
+                <widget class="QComboBox" name="comboBox_produit">
+                 <property name="styleSheet">
+                  <string notr="true">QComboBox {
+ background-color:#e86054;  /* Green */ 
+  border: none;
+ /* color: gray; 
+  padding: 15px 32px;*/
+  text-align: center;
+  font-size: 16px;
+	border:9px;
+}
+QComboBox:hover{
+
+background-color:#e0987b;
+color:#7d2b20;
+}
+QComboBox:click{
+
+background-color:#FCDBCE;
+}
+</string>
+                 </property>
+                 <property name="currentText">
+                  <string>alimentaire</string>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>alimentaire</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>esthetique</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>vestimentaire</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>divers</string>
+                  </property>
+                 </item>
+                </widget>
                </item>
               </layout>
              </item>
@@ -884,6 +945,9 @@ background-color:#FCDBCE;
               </property>
               <property name="text">
                <string>Modifier</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -983,25 +1047,7 @@ background-color:#FCDBCE;
            </widget>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_9">
-            <item>
-             <widget class="QRadioButton" name="radioButton_nbcomm">
-              <property name="text">
-               <string>Nombre de commande</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QRadioButton" name="radioButton_typeProduit">
-              <property name="text">
-               <string>Type de produit</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <widget class="QFrame" name="horizontalFrame_2">
+           <widget class="QCustomPlot" name="statPartenaires" native="true">
             <property name="minimumSize">
              <size>
               <width>300</width>
@@ -1018,19 +1064,19 @@ background-color:#FCDBCE;
           <item>
            <widget class="QToolBox" name="toolBox_part">
             <property name="currentIndex">
-             <number>1</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="page_5">
              <property name="geometry">
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>100</width>
-               <height>30</height>
+               <width>492</width>
+               <height>254</height>
               </rect>
              </property>
              <attribute name="label">
-              <string>Page 1</string>
+              <string>recherche</string>
              </attribute>
              <widget class="QPushButton" name="pushButton_recherche_partenaires">
               <property name="geometry">
@@ -1090,19 +1136,19 @@ background-color:#FCDBCE;
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>16</width>
-               <height>16</height>
+               <width>492</width>
+               <height>254</height>
               </rect>
              </property>
              <attribute name="label">
-              <string>Page 2</string>
+              <string>tri</string>
              </attribute>
              <widget class="QWidget" name="layoutWidget">
               <property name="geometry">
                <rect>
                 <x>23</x>
                 <y>30</y>
-                <width>253</width>
+                <width>299</width>
                 <height>22</height>
                </rect>
               </property>
@@ -1110,21 +1156,21 @@ background-color:#FCDBCE;
                <item>
                 <widget class="QRadioButton" name="radioButton_9">
                  <property name="text">
-                  <string>Nom_exp</string>
+                  <string>nom</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QRadioButton" name="radioButton_7">
                  <property name="text">
-                  <string>Adresse</string>
+                  <string>nombre_commandes</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QRadioButton" name="radioButton_8">
                  <property name="text">
-                  <string>Nom_dest</string>
+                  <string>produit</string>
                  </property>
                 </widget>
                </item>
@@ -1173,7 +1219,7 @@ background-color:#FCDBCE;
 </string>
             </property>
             <property name="text">
-             <string>Exporter Excel</string>
+             <string>Imprimer PDF</string>
             </property>
            </widget>
           </item>
@@ -1201,7 +1247,7 @@ background-color:#FCDBCE;
   <customwidget>
    <class>QCustomPlot</class>
    <extends>QWidget</extends>
-   <header>qcustomplot.h</header>
+   <header location="global">qcustomplot.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

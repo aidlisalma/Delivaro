@@ -5,6 +5,13 @@
 #include <QSqlQuery>
 #include<QSqlQueryModel>
 #include <QSqlRecord>
+#include <QTableView>
+#include <QFile>
+#include <QFileDialog>
+#include <QCoreApplication>
+#include <QTextStream>
+#include <QPrinter>
+#include <QTextDocument>
 
 
 class partenaire
@@ -28,9 +35,11 @@ public:
 
     bool ajouter();
     QSqlQueryModel *afficher();
-     bool supprimer(int);
-     QSqlQueryModel * chercher_partenaire(int);
+     bool supprimer(QString);
+     QSqlQueryModel * chercher_partenaire(QString);
+     QVector<double> getData();
      QSqlQueryModel * trier_partenaire();
+     void imprimerpdf (QTableView *table);
 };
 
 #endif // PARTENAIRE_H

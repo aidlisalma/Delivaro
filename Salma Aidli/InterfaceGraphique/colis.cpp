@@ -12,13 +12,14 @@ bool Colis::ajouter()
 
 
 
-    query.prepare("INSERT INTO COLIS (NUM_COLIS,ADRESSE,ID_PARTENAIRE,ID_CLIENT,DATE_LIVRAISON) VALUES(:NUM_COLIS,:ADRESSE,:ID_PARTENAIRE,:ID_CLIENT,:DATE_LIVRAISON)");
+    query.prepare("INSERT INTO COLIS (NUM_COLIS,DATE_LIVRAISON,ID_PARTENAIRE,ID_CLIENT,ADRESSE) VALUES(:NUM_COLIS,:DATE_LIVRAISON,:ID_PARTENAIRE,:ID_CLIENT,:ADRESSE)");
 
     query.bindValue(":NUM_COLIS",NUM_COLIS );
+    query.bindValue(":DATE_LIVRAISON",DATE_LIVRAISON );
     query.bindValue(":ADRESSE",ADRESSE );
     query.bindValue(":ID_PARTENAIRE",ID_PARTENAIRE );
     query.bindValue(":ID_CLIENT",ID_CLIENT);
-    query.bindValue(":DATE_LIVRAISON",DATE_LIVRAISON );
+
 
     return query.exec();
 
@@ -29,10 +30,11 @@ QSqlQueryModel* Colis::afficher()
     QSqlQueryModel *model=new QSqlQueryModel();
     model->setQuery("select* from COLIS");
     model->setHeaderData(0,Qt::Horizontal,QObject::tr("NUM_COLIS"));
-    model->setHeaderData(1,Qt::Horizontal,QObject::tr("ADRESSE"));
-    model->setHeaderData(2,Qt::Horizontal,QObject::tr("ID_PARTENAIRE"));
-    model->setHeaderData(3,Qt::Horizontal,QObject::tr("ID_CLIENT"));
-    model->setHeaderData(4,Qt::Horizontal,QObject::tr("DATE_LIVRAISON"));
+    model->setHeaderData(1,Qt::Horizontal,QObject::tr("DATE_LIVRAISON"));
+    model->setHeaderData(2,Qt::Horizontal,QObject::tr("ADRESSE"));
+    model->setHeaderData(3,Qt::Horizontal,QObject::tr("ID_PARTENAIRE"));
+    model->setHeaderData(4,Qt::Horizontal,QObject::tr("ID_CLIENT"));
+
         return model;
 
 
@@ -48,18 +50,6 @@ bool Colis::supprimer(int NUM_COLIS)
     return qry.exec();
 }
 
-/*QSqlQueryModel * Colis::trier_colis()
-{QSqlQueryModel * model= new QSqlQueryModel();
-
-model->setQuery("SELECT * from COLIS ORDER BY NUM_COLIS ASC");
-model->setHeaderData(0, Qt::Horizontal, QObject::tr("NUM_COLIS"));
-model->setHeaderData(1,Qt::Horizontal,QObject::tr("ADRESSE"));
-model->setHeaderData(2,Qt::Horizontal,QObject::tr("ID_PARTENAIRE"));
-model->setHeaderData(3,Qt::Horizontal,QObject::tr("ID_CLIENT"));
-model->setHeaderData(4,Qt::Horizontal,QObject::tr("DATE_LIVRAISON"));
-
-    return model;
-}*/
 
 QSqlQueryModel * Colis::chercher_colis(int NUM_COLIS){
 QSqlQuery q;
@@ -68,11 +58,12 @@ q.bindValue(":NUM_COLIS", NUM_COLIS);
 q.exec();
 QSqlQueryModel * model = new QSqlQueryModel;
 model->setQuery(q);
+model->setQuery("select* from COLIS");
 model->setHeaderData(0,Qt::Horizontal,QObject::tr("NUM_COLIS"));
-model->setHeaderData(1,Qt::Horizontal,QObject::tr("ADRESSE"));
-model->setHeaderData(2,Qt::Horizontal,QObject::tr("ID_PARTENAIRE"));
-model->setHeaderData(3,Qt::Horizontal,QObject::tr("ID_CLIENT"));
-model->setHeaderData(4,Qt::Horizontal,QObject::tr("DATE_LIVRAISON"));
+model->setHeaderData(1,Qt::Horizontal,QObject::tr("DATE_LIVRAISON"));
+model->setHeaderData(2,Qt::Horizontal,QObject::tr("ADRESSE"));
+model->setHeaderData(3,Qt::Horizontal,QObject::tr("ID_PARTENAIRE"));
+model->setHeaderData(4,Qt::Horizontal,QObject::tr("ID_CLIENT"));
 QSqlRecord rec = model->record(0);
 int num = rec.value("NUM_COLIS").toInt();
 if( num == NUM_COLIS){
@@ -119,7 +110,7 @@ void Colis::exporter(QTableView *table)
 
 
 
- QVector<double> Colis::getData()
+/* QVector<double> Colis::getData()
 {
      QVector<double>testData;
 
@@ -134,13 +125,8 @@ void Colis::exporter(QTableView *table)
      testData<< errerE << erreur ;
      break;}
              return testData;  }
+*/
 
- /*QSqlQueryModel * evenements::chercher(QString r) recherche avancée bel harf bel harf
-{
-    QSqlQueryModel * model= new QSqlQueryModel();
-    model->setQuery("select * from evenement where upper(nom) like upper('%"+r+"%') or upper(id) like upper('%"+r+"%') or upper(lieu) like upper('%"+r+"%') ");
-
-    */
 
  QSqlQueryModel *Colis::trier(QString critere,QString AD)
  {
@@ -151,4 +137,17 @@ void Colis::exporter(QTableView *table)
      model->setQuery(*qry);
      return model;
  }
-
+QSqlQueryModel *Colis::recherche_avancee(QString critere)
+{ QSqlQuery qry;
+     qry.prepare("select * from COLIS where lower(adresse) like '"+critere+"%' OR lower(id_partenaire) like '"+critere+"%' OR lower(id_client) like '"+critere+"%'");
+     qry.exec();
+     QSqlQueryModel * model = new QSqlQueryModel;
+     model->setQuery(qry);
+     model->setQuery("select* from COLIS");
+     model->setHeaderData(0,Qt::Horizontal,QObject::tr("NUM_COLIS"));
+     model->setHeaderData(1,Qt::Horizontal,QObject::tr("DATE_LIVRAISON"));
+     model->setHeaderData(2,Qt::Horizontal,QObject::tr("ADRESSE"));
+     model->setHeaderData(3,Qt::Horizontal,QObject::tr("ID_PARTENAIRE"));
+     model->setHeaderData(4,Qt::Horizontal,QObject::tr("ID_CLIENT"));
+     return model;
+}

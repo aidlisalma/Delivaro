@@ -9,15 +9,15 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
+    QApplication program(argc, argv);
 
 
-   // return a.exec();
+
     Connection c;
     bool test=c.createconnect();
      MainWindow w;
     if(test)
-    {w.show();
+    {w.show();  //displays it on the GUI
         QMessageBox::information(nullptr, QObject::tr("database is open"),
                     QObject::tr("connection successful.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);
@@ -30,5 +30,5 @@ int main(int argc, char *argv[])
 
 
 
-    return a.exec();
+    return program.exec(); //excecutes the program
 }
