@@ -429,3 +429,34 @@ void MainWindow::on_contract_colis_clicked()
         turn*=-1;
         QSound::play("C:/Users/legion/Documents/GitHub/Smart_Home_Delivery_2A1/Salma Aidli/InterfaceGraphique/click.wav");
 }
+
+void MainWindow::on_pushButton_recherche_partenaires_clicked()
+{
+    QSound::play("C:/Users/legion/Documents/GitHub/Smart_Home_Delivery_2A1/Salma Aidli/InterfaceGraphique/click.wav");
+
+    QString NOM = ui->lineEdit_recherche__partenaires->text();
+    QSqlQueryModel *test=tmp_partenaires.chercher_partenaire(NOM);
+    if (ui->pushButton_recherche_partenaires->isChecked()){
+        ui->pushButton_recherche_partenaires->setText("En cours");
+
+        if(test != nullptr)
+    {
+        QMessageBox::information(nullptr, QObject::tr("chercher un colis"),
+                    QObject::tr("colis trouvé.\n"
+                                "Click Cancel to get informations."), QMessageBox::Cancel);
+            ui->tableView_colis->setModel(test);
+    }
+    else
+    {
+        QMessageBox::critical(nullptr, QObject::tr("chercher un partenaire"),
+                    QObject::tr("Erreur , partenaire introuvable !.\n"
+                                "Click Cancel to exit."), QMessageBox::Cancel);
+        ui->tableView_part->setModel(test);
+}}
+        else
+        {
+            ui->pushButton_recherche_partenaires->setText("Recherche");
+            ui->tableView_part->setModel(tmp_partenaires.afficher());
+
+        }
+}

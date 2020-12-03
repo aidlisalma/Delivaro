@@ -54,10 +54,10 @@ model->setHeaderData(3,Qt::Horizontal,QObject::tr("TYPE_PRODUIT"));
 }
 
 
-QSqlQueryModel * partenaire::chercher_partenaire(QString id){
+QSqlQueryModel * partenaire::chercher_partenaire(QString nom){
 QSqlQuery q;
-q.prepare("select * from PARTENAIRES where IDENTIFIANT=:IDENTIFIANT");
-q.bindValue(":IDENTIFIANT", id);
+q.prepare("select * from PARTENAIRES where NOM=:NOM");
+q.bindValue(":NOM", nom);
 q.exec();
 QSqlQueryModel * model = new QSqlQueryModel;
 model->setQuery(q);
@@ -67,8 +67,8 @@ model->setHeaderData(2,Qt::Horizontal,QObject::tr("NOMBRE_COMMANDES"));
 model->setHeaderData(3,Qt::Horizontal,QObject::tr("TYPE_PRODUIT"));
 
 QSqlRecord rec = model->record(0);
-QString idd = rec.value("IDENTIFIANT").toString();
-if( idd == id){
+QString n = rec.value("NOM").toString();
+if( n == nom){
     return model;
   }
     return nullptr;

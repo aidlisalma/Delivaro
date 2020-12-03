@@ -101,7 +101,7 @@ QTableView {
 </string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="stackedWidgetPage1">
        <layout class="QGridLayout" name="gridLayout_3">

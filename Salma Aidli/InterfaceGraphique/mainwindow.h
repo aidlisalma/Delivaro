@@ -60,6 +60,8 @@ private slots:
 
     void on_contract_colis_clicked();
 
+    void on_pushButton_recherche_partenaires_clicked();
+
 private:
     Ui::MainWindow *ui;
     Colis tmpcolis;
