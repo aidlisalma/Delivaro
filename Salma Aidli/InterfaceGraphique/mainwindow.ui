@@ -91,7 +91,7 @@ background-color:#FCDBCE;
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="stackedWidgetPage1">
        <layout class="QGridLayout" name="gridLayout_3">
@@ -240,7 +240,7 @@ border-radius:4px
 }</string>
                 </property>
                 <property name="currentIndex">
-                 <number>0</number>
+                 <number>1</number>
                 </property>
                 <widget class="QWidget" name="page_7">
                  <property name="geometry">
@@ -1322,8 +1322,8 @@ background-color:#FCDBCE;
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>492</width>
-               <height>254</height>
+               <width>98</width>
+               <height>28</height>
               </rect>
              </property>
              <attribute name="label">

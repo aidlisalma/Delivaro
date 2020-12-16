@@ -14,14 +14,14 @@ MainWindow::MainWindow(QWidget *parent)
         nombre_commandes_regex=QRegExp("[1-9]{2,5}$");
         type_produit_regex=QRegExp("[a-zA-Z]{20}$");
 
-     //controle de saisie on the linedits
+ /*    //controle de saisie on the linedits
             ui->lineEdit_ID->setMaxLength(8);
            // ui->lineEdit_produit->setMaxLength(20);
             ui->lineEdit_nbC->setMaxLength(5);
             ui->lineEdit_destinataire->setMaxLength(8);
             ui->lineEdit_expediteur->setMaxLength(8);
 
-
+*/
 
             //Graphics
                QPixmap background("C:/Users/legion/Documents/GitHub/Smart_Home_Delivery_2A1/Salma Aidli/InterfaceGraphique/background.jpg");
@@ -89,17 +89,17 @@ void MainWindow::on_pushButton_ajouterP_clicked()
                            if (!nom_verif)
                            {
                                //QMessageBox::warning(this,"Erreur lors de l'ajout","E-mail invalid");
-                               ui->lineEdit_nom->setStyleSheet("color: red");
+                               ui->lineEdit_nom->setStyleSheet("color: blue");
                            }
                            if (!id_verif)
                            {
                                //QMessageBox::warning(this,"Erreur lors de l'ajout","CIN invalid");
-                               ui->lineEdit_ID->setStyleSheet("color: red");
+                               ui->lineEdit_ID->setStyleSheet("color: blue");
                            }
                            if (!nbC_verif )
                            {
                                //QMessageBox::warning(this,"Erreur lors de l'ajout","Téléphone invalid");
-                               ui->lineEdit_nbC->setStyleSheet("color: red");
+                               ui->lineEdit_nbC->setStyleSheet("color: blue");
                            }
 
 
