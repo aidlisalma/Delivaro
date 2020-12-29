@@ -10,6 +10,8 @@
 #include <QDebug>
 #include <QPropertyAnimation>
 #include <QSound>
+#include "reclamation.h"
+#include "publicite.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class delivaro; }
@@ -65,6 +67,34 @@ private slots:
 
 
 
+    void on_RecherchePub_clicked();
+
+    void on_SupprimerPub_clicked();
+
+    void on_TriRec_clicked();
+
+    void on_ModifierRec_clicked();
+
+    void on_SupprimerRec_clicked();
+
+    void on_Exporter_clicked();
+
+    void on_StatistiqueRec_clicked();
+
+    void on_Play_clicked();
+
+    void on_Mute_clicked();
+
+    void on_AjouterRec_clicked();
+
+    void on_AjouterPub_clicked();
+
+    void on_ModifierPub_clicked();
+
+    void on_StatPub_clicked();
+
+    void on_RechercheRec_clicked();
+
 private:
     Ui::delivaro *ui;
     Colis tmpcolis;
@@ -75,5 +105,11 @@ private:
         QRegExp type_produit_regex;
         QPropertyAnimation *contract_animation;
           QPropertyAnimation *expand_animation;
+
+          reclamation rtmp;
+          publicite ptmp;
+          QSound *son;
+          QSound *click;
+
 };
 #endif // DELIVARO_H

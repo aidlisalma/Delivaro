@@ -1,12 +1,24 @@
 #include "delivaro.h"
 #include "ui_delivaro.h"
-
+#include "statistique.h"
 delivaro::delivaro(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::delivaro)
 {
     ui->setupUi(this);
-    ui->stackedWidget->setCurrentIndex(2);
+    ui->stackedWidget->setCurrentIndex(0);
+
+    ui->tableViewRec->setModel(rtmp.afficher()); //affichage table reclamation
+    ui->tableViewPub->setModel(ptmp.afficher()); //affichage table publicite
+
+    ui->tableViewRec->setSelectionBehavior(QAbstractItemView::SelectRows);
+     ui->tableViewRec->setSelectionMode(QAbstractItemView::SingleSelection);
+
+
+    ui->tableViewPub->setSelectionBehavior(QAbstractItemView::SelectRows);
+    ui->tableViewPub->setSelectionMode(QAbstractItemView::SingleSelection);
+    son = new QSound("sound.wav");
+    click = new QSound("click.wav");
 }
 
 delivaro::~delivaro()
@@ -427,3 +439,385 @@ void delivaro::on_pushButton_clicked()
 }
 
 
+
+void delivaro::on_RecherchePub_clicked()
+{
+              click->play();
+            ui->tableViewPub->setModel(ptmp.afficher(  ));
+           int id= ui->RecherchePub_2->text().toInt();
+           ui->tableViewPub->setModel(ptmp.recherche(id));
+
+}
+
+void delivaro::on_SupprimerPub_clicked()
+{
+    click->play();
+        QItemSelectionModel *select = ui->tableViewPub->selectionModel();
+
+                int id =select->selectedRows(0).value(0).data().toInt();
+
+               if(ptmp.supprimer(id))
+                {
+                    ui->tableViewPub->setModel(ptmp.afficher());
+                    ui->statusbar->showMessage("publicite supprimé");
+                 }
+}
+
+void delivaro::on_TriRec_clicked()
+{
+    click->play();
+    ui->tableViewRec->setModel(rtmp.tri());
+}
+
+void delivaro::on_ModifierRec_clicked()
+{
+    click->play();
+        if (ui->ModifierRec->isChecked())
+                {
+                   // ui->pushButton_modifier->setDisabled(true);
+                    ui->ModifierRec->setText("Modifiable");
+                    QSqlTableModel *tableModel= new QSqlTableModel();
+                    tableModel->setTable("RECLAMATION");
+                    tableModel->select();
+                    ui->tableViewRec->setModel(tableModel);
+                }
+                else
+                {
+                    ui->ModifierRec->setText("Modifier");
+                    ui->tableViewRec->setModel(rtmp.afficher());
+
+                }
+}
+
+void delivaro::on_SupprimerRec_clicked()
+{
+    click->play();
+      QItemSelectionModel *select = ui->tableViewRec->selectionModel();
+
+              int id =select->selectedRows(0).value(0).data().toInt();
+
+             if(rtmp.supprimer(id))
+              {
+                  ui->tableViewRec->setModel(rtmp.afficher());
+                  ui->statusbar->showMessage("Reclamation supprimé");
+               }
+}
+
+void delivaro::on_Exporter_clicked()
+{
+    click->play();
+        QMessageBox msgBox;
+
+        int y=0;
+        QPdfWriter pdf("try.pdf");
+        QPainter painter;
+        if (!painter.begin(&pdf))
+        {
+            msgBox.setText("Couldn't write in the file.");
+            msgBox.exec();
+        }
+
+      QSqlQuery query("SELECT * FROM RECLAMATION");
+
+
+      while (query.next())
+      {
+          painter.setPen(Qt::red);
+          painter.drawText(4500,2000,"Fiche Reclamation");
+          painter.setPen(Qt::black);
+          painter.drawText(3000,3500+y,"Identifiant de reclamation:");
+          painter.drawText(3000,4000+y,"produit id:");
+          painter.drawText(3000,4500+y,"description:");
+          painter.drawText(3000,5000+y,"Date d'ajout de reclamation:");
+
+          QString id = query.value(0).toString();
+          QString produit_id = query.value(1).toString();
+          QString description = query.value(2).toString();
+          QString date_a = query.value(3).toString();
+
+
+          painter.drawText(5200,3500+y,id);
+          painter.drawText(5200,4000+y,produit_id);
+          painter.drawText(5200,4500+y,description);
+          painter.drawText(5200,5000+y,date_a);
+          y=y+3000;
+          query.next();
+      }
+      msgBox.setText("The document has been saved.");
+      msgBox.exec();
+
+}
+
+void delivaro::on_StatistiqueRec_clicked()
+{
+    click->play();
+       statistique stat;
+     double dag = stat.traite0();
+     double dir = stat.traite1();
+
+
+       // set dark background gradient:
+       QLinearGradient gradient(0, 0, 0, 400);
+       gradient.setColorAt(0, QColor(90, 90, 90));
+       gradient.setColorAt(0.38, QColor(105, 105, 105));
+       gradient.setColorAt(1, QColor(70, 70, 70));
+       ui->widget->setBackground(QBrush(gradient));
+       // create empty bar chart objects:
+
+       QCPBars *fossil = new QCPBars(ui->widget->xAxis, ui->widget->yAxis);
+       fossil->setAntialiased(false);
+
+
+       fossil->setStackingGap(1);
+
+
+
+       // prepare x axis with country labels:
+       QVector<double> ticks;
+       QVector<QString> labels;
+       ticks << 1 << 2 ;
+       labels << "les reclamation traite" << "les reclamation non traite" ;
+       QSharedPointer<QCPAxisTickerText> textTicker(new QCPAxisTickerText);
+       textTicker->addTicks(ticks, labels);
+       ui->widget->xAxis->setTicker(textTicker);
+       ui->widget->xAxis->setTickLabelRotation(60);
+       ui->widget->xAxis->setSubTicks(false);
+       ui->widget->xAxis->setTickLength(0, 4);
+       ui->widget->xAxis->setRange(0, 13);
+       ui->widget->xAxis->setBasePen(QPen(Qt::white));
+       ui->widget->xAxis->setTickPen(QPen(Qt::white));
+       ui->widget->xAxis->grid()->setVisible(true);
+       ui->widget->xAxis->grid()->setPen(QPen(QColor(130, 130, 130), 0, Qt::DotLine));
+       ui->widget->xAxis->setTickLabelColor(Qt::white);
+       ui->widget->xAxis->setLabelColor(Qt::white);
+
+       // prepare y axis:
+       ui->widget->yAxis->setRange(0, 10);
+       ui->widget->yAxis->setPadding(5); // a bit more space to the left border
+       ui->widget->yAxis->setLabel("Nombres des reclamations traite");
+       ui->widget->yAxis->setBasePen(QPen(Qt::white));
+       ui->widget->yAxis->setTickPen(QPen(Qt::white));
+       ui->widget->yAxis->setSubTickPen(QPen(Qt::white));
+       ui->widget->yAxis->grid()->setSubGridVisible(true);
+       ui->widget->yAxis->setTickLabelColor(Qt::white);
+       ui->widget->yAxis->setLabelColor(Qt::white);
+       ui->widget->yAxis->grid()->setPen(QPen(QColor(130, 130, 130), 0, Qt::SolidLine));
+       ui->widget->yAxis->grid()->setSubGridPen(QPen(QColor(130, 130, 130), 0, Qt::DotLine));
+
+       // Add data:
+       QVector<double> fossilData;
+
+       fossilData  << dag << dir ;
+       fossil->setData(ticks, fossilData);
+
+       ui->widget->legend->setVisible(true);
+       ui->widget->axisRect()->insetLayout()->setInsetAlignment(0, Qt::AlignTop|Qt::AlignHCenter);
+       ui->widget->legend->setBrush(QColor(255, 255, 255, 100));
+       ui->widget->legend->setBorderPen(Qt::NoPen);
+       QFont legendFont = font();
+       legendFont.setPointSize(10);
+       ui->widget->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom);
+       ui->widget->legend->setFont(legendFont);
+}
+
+void delivaro::on_Play_clicked()
+{
+    click->play();
+     son->play();
+     son->setLoops(QSound::Infinite);
+}
+
+void delivaro::on_Mute_clicked()
+{
+    click->play();
+    son->stop();
+}
+
+void delivaro::on_AjouterRec_clicked()
+{
+    click->play();
+        int id=ui->IdRec->text().toInt();
+        int produitID=ui->ProduitIdRec->text().toInt();
+        QString descrption=ui->DescriptionRec->text();
+        QString date = ui->DateRec->text();
+        int traite = ui->TraiteRec->text().toInt();
+     if(id != 0 && produitID != 0 && descrption !="" && date != "")
+      {
+
+        reclamation r(id,produitID,descrption,date,traite);
+
+        qDebug() << "id:" << r.getID();
+        qDebug() << "prod id:" << r.getProdID();
+        qDebug() << "descrption :" << r.getDescription();
+        qDebug() << "Date:" << r.getDate();
+        qDebug() << traite;
+        if(traite==1 || traite==0)
+        {
+            bool test=r.ajouter();
+               qDebug() << "test :" << test;
+               qDebug() << traite;
+            if (test)
+            {
+                ui->tableViewRec->setModel(rtmp.afficher());
+                QMessageBox::information(nullptr,QObject::tr("")
+                                         ,QObject::tr("Ajout effectué\n"
+                                                      "Click Cancel to exit."),QMessageBox::Cancel);
+                ui->tableViewRec->setModel(rtmp.afficher());
+            }
+                  }else
+                            {
+                            QMessageBox::critical(nullptr,QObject::tr("erreur")
+                                                     ,QObject::tr("Ajout non effectué , Il faut remplir tous les champs\n"
+                                                                  "Click Cancel to exit."),QMessageBox::Cancel);
+                             }
+
+        }
+        else
+            {
+                QMessageBox::critical(nullptr,QObject::tr("erreur")
+                                         ,QObject::tr("Ajout non effectué , Il faut remplir tous les champs\n"
+                                                      "Click Cancel to exit."),QMessageBox::Cancel);
+            }
+}
+
+void delivaro::on_AjouterPub_clicked()
+{
+    click->play();
+        int id=ui->IdPub->text().toInt();
+        int duree=ui->DureePub->text().toInt();
+        int prix=ui->PrixPub->text().toInt();
+        QString date = ui->DatePub->text();
+       if(id != 0 && duree !=0 && prix !=0 && date != "")
+       {
+
+        publicite p(id,duree,prix,date);
+
+        qDebug() << "id:" << p.getID();
+        qDebug() << "duree:" << p.getDuree();
+        qDebug() << "prix:" << p.getPrix();
+        qDebug() << "Date:" << p.getDate();
+
+        bool test=p.ajouter();
+           qDebug() << "test :" << test;
+        if (test)
+        {
+            ui->tableViewPub->setModel(ptmp.afficher());
+            QMessageBox::information(nullptr,QObject::tr("")
+                                     ,QObject::tr("Ajout effectué\n"
+                                                  "Click Cancel to exit."),QMessageBox::Cancel);
+        }
+       }
+
+
+  else
+
+            {
+                QMessageBox::warning(nullptr,QObject::tr("Erreur de saisie")
+                                         ,QObject::tr("Erreur de saisie ,Il faut remplir tout les champs\n"
+                                                      "Click Cancel to exit."),QMessageBox::Cancel);
+            }
+
+
+
+}
+
+
+void delivaro::on_ModifierPub_clicked()
+{
+    click->play();
+        if (ui->ModifierPub->isChecked())
+                {
+                   // ui->pushButton_modifier->setDisabled(true);
+                    ui->ModifierPub->setText("Modifiable");
+                    QSqlTableModel *tableModel= new QSqlTableModel();
+                    tableModel->setTable("PUBLICITE");
+                    tableModel->select();
+                    ui->tableViewPub->setModel(tableModel);
+                }
+                else
+                {
+                    ui->ModifierPub->setText("Modifier");
+                    ui->tableViewPub->setModel(ptmp.afficher());
+
+                }
+}
+
+void delivaro::on_StatPub_clicked()
+{
+    click->play();
+      statistique stat;
+    double dag = stat.statestique_partie1();
+    double dir = stat.statestique_partie2();
+
+
+      // set dark background gradient:
+      QLinearGradient gradient(0, 0, 0, 400);
+      gradient.setColorAt(0, QColor(90, 90, 90));
+      gradient.setColorAt(0.38, QColor(105, 105, 105));
+      gradient.setColorAt(1, QColor(70, 70, 70));
+      ui->widget_2->setBackground(QBrush(gradient));
+      // create empty bar chart objects:
+
+      QCPBars *fossil = new QCPBars(ui->widget_2->xAxis, ui->widget_2->yAxis);
+      fossil->setAntialiased(false);
+
+
+      fossil->setStackingGap(1);
+
+
+      // prepare x axis with country labels:
+      QVector<double> ticks;
+      QVector<QString> labels;
+      ticks << 1 << 2 ;
+      labels << "prix entre 1 et 50" << "prix entre 50 et 100 " ;
+      QSharedPointer<QCPAxisTickerText> textTicker(new QCPAxisTickerText);
+      textTicker->addTicks(ticks, labels);
+      ui->widget_2->xAxis->setTicker(textTicker);
+      ui->widget_2->xAxis->setTickLabelRotation(60);
+      ui->widget_2->xAxis->setSubTicks(false);
+      ui->widget_2->xAxis->setTickLength(0, 4);
+      ui->widget_2->xAxis->setRange(0, 13);
+      ui->widget_2->xAxis->setBasePen(QPen(Qt::white));
+      ui->widget_2->xAxis->setTickPen(QPen(Qt::white));
+      ui->widget_2->xAxis->grid()->setVisible(true);
+      ui->widget_2->xAxis->grid()->setPen(QPen(QColor(130, 130, 130), 0, Qt::DotLine));
+      ui->widget_2->xAxis->setTickLabelColor(Qt::white);
+      ui->widget_2->xAxis->setLabelColor(Qt::white);
+
+      // prepare y axis:
+      ui->widget_2->yAxis->setRange(0, 10);
+      ui->widget_2->yAxis->setPadding(5); // a bit more space to the left border
+      ui->widget_2->yAxis->setLabel("Les prix du publicite");
+      ui->widget_2->yAxis->setBasePen(QPen(Qt::white));
+      ui->widget_2->yAxis->setTickPen(QPen(Qt::white));
+      ui->widget_2->yAxis->setSubTickPen(QPen(Qt::white));
+      ui->widget_2->yAxis->grid()->setSubGridVisible(true);
+      ui->widget_2->yAxis->setTickLabelColor(Qt::white);
+      ui->widget_2->yAxis->setLabelColor(Qt::white);
+      ui->widget_2->yAxis->grid()->setPen(QPen(QColor(130, 130, 130), 0, Qt::SolidLine));
+      ui->widget_2->yAxis->grid()->setSubGridPen(QPen(QColor(130, 130, 130), 0, Qt::DotLine));
+
+      // Add data:
+      QVector<double> fossilData;
+
+      fossilData  << dag << dir ;
+      fossil->setData(ticks, fossilData);
+
+      ui->widget_2->legend->setVisible(true);
+      ui->widget_2->axisRect()->insetLayout()->setInsetAlignment(0, Qt::AlignTop|Qt::AlignHCenter);
+      ui->widget_2->legend->setBrush(QColor(255, 255, 255, 100));
+      ui->widget_2->legend->setBorderPen(Qt::NoPen);
+      QFont legendFont = font();
+      legendFont.setPointSize(10);
+      ui->widget_2->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom);
+      ui->widget_2->legend->setFont(legendFont);
+}
+
+void delivaro::on_RechercheRec_clicked()
+{
+    click->play();
+        ui->tableViewRec->setModel(rtmp.afficher(  ));
+       int id= ui->RechercheRec_2->text().toInt();
+       ui->tableViewRec->setModel(rtmp.recherche(id));
+
+}

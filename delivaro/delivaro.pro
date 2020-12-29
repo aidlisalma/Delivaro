@@ -14,14 +14,20 @@ SOURCES += \
     main.cpp \
     delivaro.cpp \
     partenaire.cpp \
-    qcustomplot.cpp
+    publicite.cpp \
+    qcustomplot.cpp \
+    reclamation.cpp \
+    statistique.cpp
 
 HEADERS += \
     colis.h \
     connection.h \
     delivaro.h \
     partenaire.h \
-    qcustomplot.h
+    publicite.h \
+    qcustomplot.h \
+    reclamation.h \
+    statistique.h
 
 FORMS += \
     delivaro.ui
