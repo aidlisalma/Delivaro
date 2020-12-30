@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../delivaro/qcustomplot.h"
+#include "../../../../Documents/GitHub/Smart_Home_Delivery_2A1/delivaro/qcustomplot.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #include <QtCore/QSharedPointer>

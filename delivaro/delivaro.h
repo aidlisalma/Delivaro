@@ -28,7 +28,7 @@ public:
 
 
 private slots:
-    void on_pushButton_clicked();
+    void on_deconnexion_clicked();
     void on_pushButton_ajouterP_clicked();
 
     void on_pushButton_ajouterColis_clicked();
@@ -94,6 +94,22 @@ private slots:
     void on_StatPub_clicked();
 
     void on_RechercheRec_clicked();
+
+    void on_login_clicked();
+
+    void on_gestionpartenaires_clicked();
+
+    void on_gestioncolis_clicked();
+
+    void on_gestionpubreclamation_clicked();
+
+    void on_retour_clicked();
+
+    void on_retour2_clicked();
+
+    void on_partenaires_clicked();
+
+    void on_retourmenu_clicked();
 
 private:
     Ui::delivaro *ui;

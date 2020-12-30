@@ -433,7 +433,7 @@ void delivaro::on_pushButton_recherche_partenaires_clicked()
 
 
 
-void delivaro::on_pushButton_clicked()
+void delivaro::on_deconnexion_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
 }
@@ -819,5 +819,77 @@ void delivaro::on_RechercheRec_clicked()
         ui->tableViewRec->setModel(rtmp.afficher(  ));
        int id= ui->RechercheRec_2->text().toInt();
        ui->tableViewRec->setModel(rtmp.recherche(id));
+
+}
+
+void delivaro::on_login_clicked()
+{
+    QString identifiant = ui->lineEdit_login->text();
+        QString mdp = ui->lineEdit_password->text();
+        QSound::play("C:/Users/legion/Documents/GitHub/Smart_Home_Delivery_2A1/Salma Aidli/InterfaceGraphique/click.wav");
+        if (identifiant == "salma" && mdp== "salma1"){
+
+            ui->stackedWidget->setCurrentIndex(1);
+            QMessageBox::information(this,"Bienvenue","Mot de passe et identifiant correctes");
+
+        }
+        else if (identifiant == "abdou" && mdp== "abdou1"){
+
+            ui->stackedWidget->setCurrentIndex(1);
+            QMessageBox::information(this,"Bienvenue","Mot de passe et identifiant correctes");
+
+        }
+        else if (identifiant == "yessine" && mdp== "yessine1"){
+
+            ui->stackedWidget->setCurrentIndex(1);
+            QMessageBox::information(this,"Bienvenue","Mot de passe et identifiant correctes");
+
+        }
+        else{
+
+            QMessageBox::information(this,"Warning","Mot de passe ou identifiant incorrectes");
+        }
+}
+
+
+void delivaro::on_gestionpartenaires_clicked()
+{   ui->stackedWidget->setCurrentIndex(2);
+
+    ui->stackedWidget_2->setCurrentIndex(1);
+
+}
+
+void delivaro::on_gestioncolis_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+
+        ui->stackedWidget_2->setCurrentIndex(0);
+
+}
+
+void delivaro::on_gestionpubreclamation_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(3);
+}
+
+void delivaro::on_retour_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+void delivaro::on_retour2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+
+}
+
+void delivaro::on_partenaires_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(1);
+}
+
+void delivaro::on_retourmenu_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
 
 }
