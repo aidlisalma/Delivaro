@@ -10,6 +10,12 @@
 #include <QDebug>
 #include <QPropertyAnimation>
 #include <QSound>
+#include "reclamation.h"
+#include "publicite.h"
+
+
+#include"trajets.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class delivaro; }
@@ -26,7 +32,7 @@ public:
 
 
 private slots:
-    void on_pushButton_clicked();
+    void on_deconnexion_clicked();
     void on_pushButton_ajouterP_clicked();
 
     void on_pushButton_ajouterColis_clicked();
@@ -65,6 +71,97 @@ private slots:
 
 
 
+    void on_RecherchePub_clicked();
+
+    void on_SupprimerPub_clicked();
+
+    void on_TriRec_clicked();
+
+    void on_ModifierRec_clicked();
+
+    void on_SupprimerRec_clicked();
+
+    void on_Exporter_clicked();
+
+    void on_StatistiqueRec_clicked();
+
+    void on_Play_clicked();
+
+    void on_Mute_clicked();
+
+    void on_AjouterRec_clicked();
+
+    void on_AjouterPub_clicked();
+
+    void on_ModifierPub_clicked();
+
+    void on_StatPub_clicked();
+
+    void on_RechercheRec_clicked();
+
+    void on_login_clicked();
+
+    void on_gestionpartenaires_clicked();
+
+    void on_gestioncolis_clicked();
+
+    void on_gestionpubreclamation_clicked();
+
+    void on_retour_clicked();
+
+    void on_retour2_clicked();
+
+
+    void on_retourmenu_clicked();
+    void on_passwordcheck_toggled(bool checked);
+
+
+    void on_vt_clicked();
+
+    void on_y1_clicked();
+    void on_y2_clicked();
+    void on_y3_clicked();
+    void on_y5_clicked();
+    void on_y6_clicked();
+
+
+
+
+    void on_pb3_clicked();
+
+    void on_pb2_clicked();
+
+    void on_matricule_textChanged(const QString &arg1);
+
+    void on_ln1_textChanged(const QString &arg1);
+
+    void on_ln1_editingFinished();
+
+    void on_pb6_clicked();
+
+    void on_stackedWidget_3_currentChanged(int arg1);
+
+    void on_dateEdit_userDateChanged(const QDate &date);
+
+    void on_pb5_clicked();
+
+    void on_lineEdit_6_textChanged(const QString &arg1);
+
+
+    void on_pb4_clicked();
+
+    void on_table_modif_cellChanged(int row, int column);
+
+
+    void on_stackedWidget_2_currentChanged(int arg1);
+
+    //void on_tabWidget_2_currentChanged(int index);
+
+    void on_lineEdit_10_textChanged(const QString &arg1);
+    void playsound();
+
+
+
 private:
     Ui::delivaro *ui;
     Colis tmpcolis;
@@ -75,5 +172,16 @@ private:
         QRegExp type_produit_regex;
         QPropertyAnimation *contract_animation;
           QPropertyAnimation *expand_animation;
+
+          reclamation rtmp;
+          publicite ptmp;
+          QSound *son;
+          QSound *click;
+
+
+          QVector<carac_trajet> T;
+          Voitures V1;
+          Trajets T1;
+
 };
 #endif // DELIVARO_H
