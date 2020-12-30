@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>delivaro</string>
   </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
   <property name="styleSheet">
    <string notr="true">QMainWindow
 {
@@ -32,7 +35,7 @@ background-color:#FFEEE7;
 }</string>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="authentification">
        <widget class="QWidget" name="layoutWidget_11">
@@ -102,11 +105,34 @@ background-color:#FFEEE7;
                <height>31</height>
               </size>
              </property>
+             <property name="inputMethodHints">
+              <set>Qt::ImhHiddenText|Qt::ImhNoAutoUppercase|Qt::ImhNoPredictiveText|Qt::ImhSensitiveData</set>
+             </property>
+             <property name="inputMask">
+              <string/>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="echoMode">
+              <enum>QLineEdit::Password</enum>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
              </property>
              <property name="placeholderText">
               <string>Password</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="passwordcheck">
+             <property name="text">
+              <string>show password</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>showpasswordicon.png</normaloff>showpasswordicon.png</iconset>
              </property>
             </widget>
            </item>
@@ -215,7 +241,7 @@ background-color:#FCDBCE;
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="partenaires">
+          <widget class="QPushButton" name="pushButton_tabpartenaires">
            <property name="styleSheet">
             <string notr="true">QPushButton {
  background-color:#e86054;  /* Green */ 
@@ -413,8 +439,8 @@ border-radius:4px
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>585</width>
-                     <height>279</height>
+                     <width>100</width>
+                     <height>30</height>
                     </rect>
                    </property>
                    <attribute name="label">
@@ -478,8 +504,8 @@ background-color:#FCDBCE;
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>585</width>
-                     <height>279</height>
+                     <width>16</width>
+                     <height>16</height>
                     </rect>
                    </property>
                    <attribute name="label">

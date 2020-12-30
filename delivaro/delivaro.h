@@ -107,9 +107,10 @@ private slots:
 
     void on_retour2_clicked();
 
-    void on_partenaires_clicked();
 
     void on_retourmenu_clicked();
+    void on_passwordcheck_toggled(bool checked);
+
 
 private:
     Ui::delivaro *ui;

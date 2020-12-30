@@ -883,13 +883,19 @@ void delivaro::on_retour2_clicked()
 
 }
 
-void delivaro::on_partenaires_clicked()
-{
-    ui->stackedWidget_2->setCurrentIndex(1);
-}
+
 
 void delivaro::on_retourmenu_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
 
+}
+void delivaro::on_passwordcheck_toggled(bool checked)
+{
+
+    if(checked){
+        ui->lineEdit_password->setEchoMode(QLineEdit::Normal);
+    }
+    else
+         ui->lineEdit_password->setEchoMode(QLineEdit::Password);
 }
