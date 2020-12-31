@@ -9,6 +9,8 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    carac_trajet.cpp \
+    carac_voiture.cpp \
     colis.cpp \
     connection.cpp \
     main.cpp \
@@ -17,9 +19,13 @@ SOURCES += \
     publicite.cpp \
     qcustomplot.cpp \
     reclamation.cpp \
-    statistique.cpp
+    statistique.cpp \
+    trajets.cpp \
+    voitures.cpp
 
 HEADERS += \
+    carac_trajet.h \
+    carac_voiture.h \
     colis.h \
     connection.h \
     delivaro.h \
@@ -27,7 +33,9 @@ HEADERS += \
     publicite.h \
     qcustomplot.h \
     reclamation.h \
-    statistique.h
+    statistique.h \
+    trajets.h \
+    voitures.h
 
 FORMS += \
     delivaro.ui

@@ -13,6 +13,10 @@
 #include "reclamation.h"
 #include "publicite.h"
 
+
+#include"trajets.h"
+
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class delivaro; }
 QT_END_NAMESPACE
@@ -112,6 +116,52 @@ private slots:
     void on_passwordcheck_toggled(bool checked);
 
 
+    void on_vt_clicked();
+
+    void on_y1_clicked();
+    void on_y2_clicked();
+    void on_y3_clicked();
+    void on_y5_clicked();
+    void on_y6_clicked();
+
+
+
+
+    void on_pb3_clicked();
+
+    void on_pb2_clicked();
+
+    void on_matricule_textChanged(const QString &arg1);
+
+    void on_ln1_textChanged(const QString &arg1);
+
+    void on_ln1_editingFinished();
+
+    void on_pb6_clicked();
+
+    void on_stackedWidget_3_currentChanged(int arg1);
+
+    void on_dateEdit_userDateChanged(const QDate &date);
+
+    void on_pb5_clicked();
+
+    void on_lineEdit_6_textChanged(const QString &arg1);
+
+
+    void on_pb4_clicked();
+
+    void on_table_modif_cellChanged(int row, int column);
+
+
+    void on_stackedWidget_2_currentChanged(int arg1);
+
+    //void on_tabWidget_2_currentChanged(int index);
+
+    void on_lineEdit_10_textChanged(const QString &arg1);
+    void playsound();
+
+
+
 private:
     Ui::delivaro *ui;
     Colis tmpcolis;
@@ -127,6 +177,11 @@ private:
           publicite ptmp;
           QSound *son;
           QSound *click;
+
+
+          QVector<carac_trajet> T;
+          Voitures V1;
+          Trajets T1;
 
 };
 #endif // DELIVARO_H
