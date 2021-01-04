@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.13.2, 2020-12-30T19:58:20. -->
+<!-- Written by QtCreator 4.13.2, 2021-01-04T08:39:38. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -325,6 +325,7 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">delivaro2</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/legion/Documents/GitHub/Smart_Home_Delivery_2A1/delivaro/delivaro.pro</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/legion/Documents/GitHub/Smart_Home_Delivery_2A1/delivaro/delivaro.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
