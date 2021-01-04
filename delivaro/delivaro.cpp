@@ -1,6 +1,7 @@
 #include "delivaro.h"
 #include "ui_delivaro.h"
 #include "statistique.h"
+
 delivaro::delivaro(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::delivaro)
@@ -825,12 +826,12 @@ void delivaro::on_RechercheRec_clicked()
 void delivaro::on_login_clicked()
 {
 
-    Connection C;
+   /* Connection C;
     QSqlQuery dbQuery;
 
     V1.Load_DB(ui);
     qDebug()<<"VOITURES DB LOADED";
-    T1.Load_DB(ui);
+    T1.Load_DB(ui);*/
 
     QString identifiant = ui->lineEdit_login->text();
         QString mdp = ui->lineEdit_password->text();
