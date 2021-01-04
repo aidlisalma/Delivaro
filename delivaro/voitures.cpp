@@ -260,7 +260,7 @@ void Voitures::Exporter(Ui::delivaro *ui)
 
     // [Save to file] (header file <QFile> needed)
     // .csv
-    QFile csvFile("C:/Users/Yessine/Desktop/testinggg/test.csv");
+    QFile csvFile("C:/Users/Yessine/Desktop/delivaro/test.csv");
     if(csvFile.open(QIODevice::WriteOnly | QIODevice::Truncate))
     {
 

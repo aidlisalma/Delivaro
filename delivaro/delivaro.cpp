@@ -824,13 +824,12 @@ void delivaro::on_RechercheRec_clicked()
 
 void delivaro::on_login_clicked()
 {
-
     Connection C;
     QSqlQuery dbQuery;
-
     V1.Load_DB(ui);
     qDebug()<<"VOITURES DB LOADED";
     T1.Load_DB(ui);
+
 
     QString identifiant = ui->lineEdit_login->text();
         QString mdp = ui->lineEdit_password->text();
@@ -853,6 +852,8 @@ void delivaro::on_login_clicked()
 
             ui->stackedWidget->setCurrentIndex(1);
             QMessageBox::information(this,"Bienvenue","Mot de passe et identifiant correctes");
+
+
 
         }
         else{
@@ -1143,5 +1144,15 @@ void delivaro::playsound()
     qDebug()<<"played";
     music->play();
 }
-
-
+void delivaro::on_pb90_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+void delivaro::on_pb91_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+void delivaro::on_pb92_clicked()
+{
+    V1.Exporter(ui);
+}

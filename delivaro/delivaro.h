@@ -123,6 +123,9 @@ private slots:
     void on_y3_clicked();
     void on_y5_clicked();
     void on_y6_clicked();
+    void on_pb90_clicked();
+    void on_pb91_clicked();
+    void on_pb92_clicked();
 
 
 
