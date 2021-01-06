@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>654</width>
-    <height>436</height>
+    <width>665</width>
+    <height>458</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -500,7 +500,7 @@ QCheckBox::indicator{
      <number>0</number>
     </property>
     <widget class="QWidget" name="page">
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="pb1">
       <property name="geometry">
        <rect>
         <x>290</x>
@@ -521,7 +521,7 @@ QCheckBox::indicator{
         <x>0</x>
         <y>0</y>
         <width>661</width>
-        <height>381</height>
+        <height>431</height>
        </rect>
       </property>
       <property name="currentIndex">
@@ -585,7 +585,7 @@ QCheckBox::indicator{
            </property>
           </column>
          </widget>
-         <widget class="QLineEdit" name="lineEdit">
+         <widget class="QLineEdit" name="ln1">
           <property name="geometry">
            <rect>
             <x>90</x>
@@ -747,7 +747,7 @@ QCheckBox::indicator{
             <string>#Matricule</string>
            </property>
           </widget>
-          <widget class="QPushButton" name="pushButton_9">
+          <widget class="QPushButton" name="pb2">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -812,7 +812,7 @@ QCheckBox::indicator{
             <string>Type</string>
            </property>
           </widget>
-          <widget class="QPushButton" name="pushButton_10">
+          <widget class="QPushButton" name="pb3">
            <property name="geometry">
             <rect>
              <x>240</x>
@@ -895,7 +895,7 @@ QCheckBox::indicator{
             </property>
            </column>
           </widget>
-          <widget class="QPushButton" name="pushButton_3">
+          <widget class="QPushButton" name="pb4">
            <property name="geometry">
             <rect>
              <x>260</x>
@@ -935,7 +935,7 @@ QCheckBox::indicator{
             <x>20</x>
             <y>40</y>
             <width>611</width>
-            <height>291</height>
+            <height>281</height>
            </rect>
           </property>
           <column>
@@ -1341,10 +1341,10 @@ QCheckBox::indicator{
             </widget>
            </widget>
           </widget>
-          <widget class="QPushButton" name="pushButton_4">
+          <widget class="QPushButton" name="pb6">
            <property name="geometry">
             <rect>
-             <x>180</x>
+             <x>250</x>
              <y>300</y>
              <width>75</width>
              <height>23</height>
@@ -1354,13 +1354,13 @@ QCheckBox::indicator{
             <string>Annuler</string>
            </property>
           </widget>
-          <widget class="QPushButton" name="pushButton_6">
+          <widget class="QPushButton" name="pb5">
            <property name="enabled">
             <bool>true</bool>
            </property>
            <property name="geometry">
             <rect>
-             <x>270</x>
+             <x>150</x>
              <y>300</y>
              <width>81</width>
              <height>23</height>
@@ -1384,8 +1384,8 @@ QCheckBox::indicator{
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>654</width>
-     <height>21</height>
+     <width>665</width>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -1403,6 +1403,9 @@ QCheckBox::indicator{
    </property>
    <property name="windowTitle">
     <string>toolBar</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
    </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>

@@ -17,14 +17,14 @@ mywindow::~mywindow()
 }
 
 
-void mywindow::on_pushButton_10_clicked()
+void mywindow::on_pb3_clicked()
 {
     playsound();
     ui->stackedWidget->setCurrentIndex(0);
 }
 
 
-void mywindow::on_pushButton_9_clicked()
+void mywindow::on_pb2_clicked()
 {
     playsound();
     V1.Ajouter(ui);
@@ -34,13 +34,13 @@ void mywindow::on_pushButton_9_clicked()
 void mywindow::on_matricule_textChanged(const QString &arg1)
 {
     if (arg1.size()>=3)
-        ui->pushButton_9->setEnabled(true);
+        ui->pb2->setEnabled(true);
     else
-        ui->pushButton_9->setEnabled(false);
+        ui->pb2->setEnabled(false);
 }
 
 
-void mywindow::on_lineEdit_textChanged(const QString &arg1)
+void mywindow::on_ln1_textChanged(const QString &arg1)
 {
     QStringList wordlist;
 
@@ -48,7 +48,7 @@ void mywindow::on_lineEdit_textChanged(const QString &arg1)
         wordlist.push_back(V1.Get_V()[i].get_matricule());
     QCompleter *completer = new QCompleter(wordlist,this);
     completer->setCaseSensitivity(Qt::CaseInsensitive);
-    ui->lineEdit->setCompleter(completer);
+    ui->ln1->setCompleter(completer);
 
 
 }
@@ -76,13 +76,13 @@ void mywindow::on_actionNouveau_triggered()
 }
 
 
-void mywindow::on_lineEdit_editingFinished()
+void mywindow::on_ln1_editingFinished()
 {
     V1.Rechercher(ui);
 }
 
 
-void mywindow::on_pushButton_4_clicked()
+void mywindow::on_pb6_clicked()
 {
     playsound();
     ui->stackedWidget_2->setCurrentIndex(0);
@@ -112,7 +112,7 @@ void mywindow::on_dateEdit_userDateChanged(const QDate &date)
 }
 
 
-void mywindow::on_pushButton_6_clicked()
+void mywindow::on_pb5_clicked()
 {
     playsound();
     T1.Ajouter(ui,V1);
@@ -138,7 +138,7 @@ void mywindow::on_actionaffecter_triggered()
 }
 
 
-void mywindow::on_pushButton_3_clicked()
+void mywindow::on_pb4_clicked()
 {
     playsound();
     ui->stackedWidget->setCurrentIndex(0);
@@ -179,6 +179,7 @@ void mywindow::on_tabWidget_2_currentChanged(int index)
         ui->actionNouveau->setText("Nouveau Trajet");
         ui->actionSupprimer->setText("Supprimer");
         ui->actionaffecter->setVisible(false);
+        ui->actionStatistiques->setVisible(false);
         ui->table_trajet->setSortingEnabled(true);
     }
     else if(index==0)
@@ -186,6 +187,7 @@ void mywindow::on_tabWidget_2_currentChanged(int index)
         ui->actionNouveau->setText("Nouvelle Voiture");
         ui->actionSupprimer->setText("Supprimer");
         ui->actionaffecter->setVisible(true);
+        ui->actionStatistiques->setVisible(true);
         ui->table_modif->setSortingEnabled(true);
     }
     ui->toolBar->show();
@@ -204,7 +206,7 @@ void mywindow::on_lineEdit_10_textChanged(const QString &arg1)
 }
 
 
-void mywindow::on_pushButton_2_clicked()
+void mywindow::on_pb1_clicked()
 {
     //BEGIN TEST
     playsound();
@@ -235,3 +237,5 @@ void mywindow::playsound()
     qDebug()<<"played";
     music->play();
 }
+
+

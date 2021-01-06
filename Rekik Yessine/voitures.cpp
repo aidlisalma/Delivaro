@@ -127,7 +127,7 @@ void Voitures::Dispo(Ui::mywindow *ui)
 void Voitures::Rechercher(Ui::mywindow *ui)
 {
     int i=0;
-       while(i<V.size() && ui->lineEdit->text()!=ui->table_modif->item(i,0)->text())
+       while(i<V.size() && ui->ln1->text()!=ui->table_modif->item(i,0)->text())
            i++;
     if(i<V.size())
         ui->table_modif->selectRow(i);

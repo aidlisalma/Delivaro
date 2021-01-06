@@ -18,33 +18,33 @@ private slots:
 
 //9,10,,3,4,6
 
-    void on_pushButton_10_clicked();
+    void on_pb3_clicked();
 
-    void on_pushButton_9_clicked();
+    void on_pb2_clicked();
 
     void on_matricule_textChanged(const QString &arg1);
 
-    void on_lineEdit_textChanged(const QString &arg1);
+    void on_ln1_textChanged(const QString &arg1);
 
     void on_actionSupprimer_triggered();
 
     void on_actionNouveau_triggered();
 
-    void on_lineEdit_editingFinished();
+    void on_ln1_editingFinished();
 
-    void on_pushButton_4_clicked();
+    void on_pb6_clicked();
 
     void on_stackedWidget_currentChanged(int arg1);
 
     void on_dateEdit_userDateChanged(const QDate &date);
 
-    void on_pushButton_6_clicked();
+    void on_pb5_clicked();
 
     void on_lineEdit_6_textChanged(const QString &arg1);
 
     void on_actionaffecter_triggered();
 
-    void on_pushButton_3_clicked();
+    void on_pb4_clicked();
 
     void on_table_modif_cellChanged(int row, int column);
 
@@ -56,9 +56,11 @@ private slots:
 
     void on_lineEdit_10_textChanged(const QString &arg1);
 
-    void on_pushButton_2_clicked();
+    void on_pb1_clicked();
 
     void on_actionStatistiques_triggered();
+
+
 
 
 private:

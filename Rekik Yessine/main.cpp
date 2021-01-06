@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
 
     if ( C.create_connection())
     {
+
         w.show();
     }
 
