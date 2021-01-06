@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     bool test=c.createconnect();
      delivaro w;
     if(test)
-    {//w.show();  //displays it on the GUI
+    {w.show();  //displays it on the GUI
         QMessageBox::information(nullptr, QObject::tr("database is open"),
                     QObject::tr("connection successful.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);
@@ -23,7 +23,6 @@ int main(int argc, char *argv[])
                     QObject::tr("connection failed.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);
 
-    w.show();
 
     return program.exec(); //excecutes the program
 }
