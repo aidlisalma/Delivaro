@@ -12,9 +12,19 @@
 #include <QSound>
 #include "reclamation.h"
 #include "publicite.h"
-
-
+//#include"carac_trajet.h"
+//#include"carac_voiture.h"
+#include"connection.h"
 #include"trajets.h"
+#include<QTableWidget>
+#include<QCompleter>
+#include<QComboBox>
+#include<QFile>
+#include <QTextStream>
+#include <QtCharts>
+#include <QMediaPlayer>
+#include<QUrl>
+
 
 
 QT_BEGIN_NAMESPACE
@@ -123,6 +133,9 @@ private slots:
     void on_y3_clicked();
     void on_y5_clicked();
     void on_y6_clicked();
+    void on_pb90_clicked();
+    void on_pb91_clicked();
+    void on_pb92_clicked();
 
 
 
@@ -160,7 +173,11 @@ private slots:
     void on_lineEdit_10_textChanged(const QString &arg1);
     void playsound();
 
+    void Load_DBV();
+    void Load_DBT();
 
+
+    void on_pushButton355_clicked();
 
 private:
     Ui::delivaro *ui;
@@ -178,10 +195,10 @@ private:
           QSound *son;
           QSound *click;
 
-
+          QVector<Carac_voiture> V;
           QVector<carac_trajet> T;
-          Voitures V1;
-          Trajets T1;
+          //Voitures V;
+          //Trajets T;
 
 };
 #endif // DELIVARO_H
