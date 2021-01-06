@@ -19,10 +19,10 @@ class statistique : public QDialog
 public:
     statistique();
 
-     double statestique_partie2();
-     double statestique_partie1();
-     double traite0();
-     double traite1();
+    double statestique_partie2();
+    double statestique_partie1();
+    double traite0();
+    double traite1();
 
 };
 

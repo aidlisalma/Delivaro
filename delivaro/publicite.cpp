@@ -18,17 +18,17 @@ publicite::publicite(int id,int duree ,int prix,QString date)
 }
 bool publicite::ajouter() //works
 {
-QSqlQuery query;
-query.prepare("INSERT INTO PUBLICITE VALUES(:id,:prix,:duree,:date)");
+    QSqlQuery query;
+    query.prepare("INSERT INTO PUBLICITE VALUES(:id,:prix,:duree,:date)");
 
-query.bindValue(":id",getID());
-query.bindValue(":duree",getDuree());
-query.bindValue(":prix",getPrix());
-query.bindValue(":date",getDate());
-return query.exec();
+    query.bindValue(":id",getID());
+    query.bindValue(":duree",getDuree());
+    query.bindValue(":prix",getPrix());
+    query.bindValue(":date",getDate());
+    return query.exec();
 }
 QSqlQueryModel * publicite::afficher() //Works
-    {
+{
     QSqlQueryModel * model = new QSqlQueryModel();
     model->setQuery("select * from publicite");
     model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID")); //horizontal
@@ -36,7 +36,7 @@ QSqlQueryModel * publicite::afficher() //Works
     model->setHeaderData(2,Qt::Horizontal,QObject::tr("DUREE")); //horizontal
     model->setHeaderData(3,Qt::Horizontal,QObject::tr("DATE")); //horizontal
     return model;
-    }
+}
 
 bool publicite::supprimer(int id) //works
 {
@@ -45,7 +45,7 @@ bool publicite::supprimer(int id) //works
     query.prepare("DELETE FROM PUBLICITE WHERE ID = :id");
     query.bindValue(":id",res);
     return query.exec();
-    }
+}
 QSqlQueryModel *publicite::recherche(int id) //Works
 {
     QString query1="SELECT * FROM PUBLICITE WHERE ID=";
@@ -53,11 +53,11 @@ QSqlQueryModel *publicite::recherche(int id) //Works
     QString queryfull=query1 + idtxt;
 
     QSqlQueryModel * model = new QSqlQueryModel();
-      model->setQuery(queryfull);
-      model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID")); //horizontal
-      model->setHeaderData(1,Qt::Horizontal,QObject::tr("PRIX")); //horizontal
-      model->setHeaderData(2,Qt::Horizontal,QObject::tr("DUREE")); //horizontal
-      model->setHeaderData(3,Qt::Horizontal,QObject::tr("DATE")); //horizontal
+    model->setQuery(queryfull);
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID")); //horizontal
+    model->setHeaderData(1,Qt::Horizontal,QObject::tr("PRIX")); //horizontal
+    model->setHeaderData(2,Qt::Horizontal,QObject::tr("DUREE")); //horizontal
+    model->setHeaderData(3,Qt::Horizontal,QObject::tr("DATE")); //horizontal
     return model;
 }
 QSqlQueryModel *publicite::tri() //works
@@ -66,11 +66,11 @@ QSqlQueryModel *publicite::tri() //works
     query.prepare("SELECT * FROM PUBLICITE ORDER BY ID ASC");
     query.exec();
     QSqlQueryModel * model = new QSqlQueryModel();
-      model->setQuery(query);
-      model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID")); //horizontal
-      model->setHeaderData(1,Qt::Horizontal,QObject::tr("PRIX")); //horizontal
-      model->setHeaderData(2,Qt::Horizontal,QObject::tr("DUREE")); //horizontal
-      model->setHeaderData(3,Qt::Horizontal,QObject::tr("DATE")); //horizontal;
+    model->setQuery(query);
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID")); //horizontal
+    model->setHeaderData(1,Qt::Horizontal,QObject::tr("PRIX")); //horizontal
+    model->setHeaderData(2,Qt::Horizontal,QObject::tr("DUREE")); //horizontal
+    model->setHeaderData(3,Qt::Horizontal,QObject::tr("DATE")); //horizontal;
     return model;
 }
 

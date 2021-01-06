@@ -14,10 +14,6 @@ private:
     QString cdp_livraison;
     QString date_chargement;
     QString date_livraison;
-
-
-
-
     QString date;
 
 
