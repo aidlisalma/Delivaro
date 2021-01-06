@@ -12,6 +12,8 @@
 #include <QSound>
 #include "reclamation.h"
 #include "publicite.h"
+#include"carac_trajet.h"
+#include"carac_voiture.h"
 
 
 #include"trajets.h"
@@ -163,7 +165,11 @@ private slots:
     void on_lineEdit_10_textChanged(const QString &arg1);
     void playsound();
 
+    void Load_DBV();
+    void Load_DBT();
 
+
+    void on_pushButton355_clicked();
 
 private:
     Ui::delivaro *ui;
@@ -181,10 +187,10 @@ private:
           QSound *son;
           QSound *click;
 
-
+          QVector<Carac_voiture> V;
           QVector<carac_trajet> T;
-          Voitures V1;
-          Trajets T1;
+          //Voitures V;
+          //Trajets T;
 
 };
 #endif // DELIVARO_H

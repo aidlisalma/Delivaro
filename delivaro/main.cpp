@@ -24,6 +24,5 @@ int main(int argc, char *argv[])
                                 "Click Cancel to exit."), QMessageBox::Cancel);
 
 
-
     return program.exec(); //excecutes the program
 }
