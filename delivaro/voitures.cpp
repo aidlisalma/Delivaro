@@ -1,12 +1,12 @@
 #include "voitures.h"
-#include "ui_delivaro.h"
+//#include "ui_delivaro.h"
 
 
 Voitures::Voitures()
 {
 
 }
-void Voitures::Ajouter(Ui::delivaro *ui)
+/*void Voitures::Ajouter(Ui::delivaro *ui)
 {
     Carac_voiture e;
     e.set_matricule(ui->matricule->text());
@@ -59,9 +59,9 @@ void Voitures::Ajouter(Ui::delivaro *ui)
         msgbox.setText("Matricule Existe Deja !");
         msgbox.exec();
     }
-}
+}*/
 
-void Voitures::Supprimer(Ui::delivaro *ui)
+/*void Voitures::Supprimer(Ui::delivaro *ui)
 {
     QMessageBox msgbox;
     msgbox.addButton(msgbox.Yes);
@@ -95,9 +95,9 @@ void Voitures::Supprimer(Ui::delivaro *ui)
         msgbox2.exec();
     }
    // ui->table_modif->clearSelection(); not working
-}
+}*/
 
-void Voitures::Dispo(Ui::delivaro *ui)
+/*void Voitures::Dispo(Ui::delivaro *ui)
 {
     {
         ui->stackedWidget_2->setCurrentIndex(1);
@@ -121,19 +121,19 @@ void Voitures::Dispo(Ui::delivaro *ui)
         }
         ui->tabledispo->setSortingEnabled(true);
     }
-}
+}*/
 
 
-void Voitures::Rechercher(Ui::delivaro *ui)
+/*void Voitures::Rechercher(Ui::delivaro *ui)
 {
     int i=0;
        while(i<V.size() && ui->ln1->text()!=ui->table_modif->item(i,0)->text())
            i++;
     if(i<V.size())
         ui->table_modif->selectRow(i);
-}
+}*/
 
-void Voitures::Affecter(Ui::delivaro *ui,carac_trajet e)
+/*void Voitures::Affecter(Ui::delivaro *ui,carac_trajet e)
 {
 
     foreach(QModelIndex index, ui->tabledispo->selectionModel()->selectedRows())
@@ -158,9 +158,11 @@ void Voitures::Affecter(Ui::delivaro *ui,carac_trajet e)
                     //msgbox.setText(msgbox.text() + QString::number(V[i].get_num_traj().size())); nbr d'affectation
                 }
         }
-}
+}*/
 
-void Voitures::Trajets_Associes(Ui::delivaro *ui, QVector<carac_trajet> T)
+
+// TRAAAAAAAAJ ASSSSOOOOOOOOOO
+/*void Voitures::Trajets_Associes(Ui::delivaro *ui, QVector<carac_trajet> T)
 {
     if (ui->table_modif->currentRow()>=0)
      ui->table_trajeff->setRowCount(0);
@@ -197,10 +199,10 @@ void Voitures::Trajets_Associes(Ui::delivaro *ui, QVector<carac_trajet> T)
         ui->table_trajeff->setSortingEnabled(true);
         ui->stackedWidget->setCurrentIndex(2);
     }
-}
+}*/
 
 
-void Voitures::Modifier(Ui::delivaro *ui,int row,int column)
+/*void Voitures::Modifier(Ui::delivaro *ui,int row,int column)
 {
     int i=0;
     while(i<V.size()&& V[i].get_matricule()!=ui->table_modif->item(row,0)->text())
@@ -240,9 +242,9 @@ void Voitures::Modifier(Ui::delivaro *ui,int row,int column)
         }break;
         }
     }
-}
+}*/
 
-void Voitures::Exporter(Ui::delivaro *ui)
+/*void Voitures::Exporter(Ui::delivaro *ui)
 {
     QString textData;
     int rows = ui->table_modif->rowCount();
@@ -274,8 +276,8 @@ void Voitures::Exporter(Ui::delivaro *ui)
         msgbox.setText("Fichier Exporté Avec Succès");
         msgbox.exec();
     }
-}
-void Voitures::Load_DB(Ui::delivaro *ui)
+}*/
+/*void Voitures::Load_DB(Ui::delivaro *ui)
 {
     Connection C;
     QSqlQuery dbQuery;
@@ -308,71 +310,6 @@ void Voitures::Load_DB(Ui::delivaro *ui)
             qDebug()<<t.get_matricule();
         }
     ui->table_modif->setSortingEnabled(true);
-}
-
-void Voitures::Statistiques()
-{
-    /*QBarSet *set0 = new QBarSet("Jane");
-    QBarSet *set1 = new QBarSet("John");
-    QBarSet *set2 = new QBarSet("Axel");
-    QBarSet *set3 = new QBarSet("Mary");
-    QBarSet *set4 = new QBarSet("Samantha");*/
-    int j;
-    int k;
-    int x;
-    //TESting
-    QBarSeries *series = new QBarSeries();
-    for(int i=0;i<V.size();i++)
-    {
-        j=0;
-        while (j<i && V[j].get_type()!=V[i].get_type())
-            j++;
-        if (j==i)//New Type
-        {
-            QBarSet *set_i=new QBarSet(V[i].get_type());
-            x=0;
-            for (k=i;k<V.size();k++)//Occurences
-                if(V[k].get_type()==V[i].get_type())
-                    x++;
-            *set_i<<x;
-            series->append(set_i);
+}*/
 
 
-        }
-
-    }
-
-    /**set0 << 1 << 2 << 3 << 4 << 5 << 6;
-        *set1 << 5 << 0 << 0 << 4 << 0 << 7;
-        *set2 << 3 << 5 << 8 << 13 << 8 << 5;
-        *set3 << 5 << 6 << 7 << 3 << 4 << 5;
-        *set4 << 9 << 7 << 5 << 3 << 1 << 2;*/
-
-    /*QBarSeries *series = new QBarSeries();
-        series->append(set0);
-        series->append(set1);
-        series->append(set2);
-        series->append(set3);
-        series->append(set4);*/
-
-     QChart *chart = new QChart();
-           chart->addSeries(series);
-           chart->setTitle("Statistiques");
-           chart->setAnimationOptions(QChart::SeriesAnimations);
-
-     QStringList categories;
-             categories << "Type Voitures"; //<< "Feb" << "Mar" << "Apr" << "May" << "Jun";
-     QBarCategoryAxis *axis = new QBarCategoryAxis();
-              axis->append(categories);
-              chart->createDefaultAxes();
-              chart->setAxisX(axis, series);
-
-
-              chart->legend()->setVisible(true);
-              chart->legend()->setAlignment(Qt::AlignBottom);
-
-      QChartView *chartView = new QChartView(chart);
-                 chartView->setRenderHint(QPainter::Antialiasing);
-                 chartView->resize(620,325);
-                 chartView->show();
-}
