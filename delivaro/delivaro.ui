@@ -2676,8 +2676,8 @@ background-color:#FCDBCE;
        <widget class="QTabWidget" name="tabWidget_2">
         <property name="geometry">
          <rect>
-          <x>730</x>
-          <y>30</y>
+          <x>340</x>
+          <y>170</y>
           <width>741</width>
           <height>391</height>
          </rect>
@@ -2694,7 +2694,7 @@ background-color:#FCDBCE;
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>681</width>
+            <width>711</width>
             <height>361</height>
            </rect>
           </property>
@@ -2774,7 +2774,7 @@ background-color:#FCDBCE;
              <rect>
               <x>590</x>
               <y>50</y>
-              <width>75</width>
+              <width>121</width>
               <height>23</height>
              </rect>
             </property>
@@ -2807,7 +2807,7 @@ background-color:#FCDBCE;
              <rect>
               <x>590</x>
               <y>90</y>
-              <width>75</width>
+              <width>121</width>
               <height>23</height>
              </rect>
             </property>
@@ -2839,8 +2839,8 @@ background-color:#FCDBCE;
             <property name="geometry">
              <rect>
               <x>590</x>
-              <y>130</y>
-              <width>75</width>
+              <y>170</y>
+              <width>121</width>
               <height>23</height>
              </rect>
             </property>
@@ -2865,15 +2865,15 @@ background-color:#FCDBCE;
 }</string>
             </property>
             <property name="text">
-             <string>Stats</string>
+             <string>Statistiques</string>
             </property>
            </widget>
            <widget class="QPushButton" name="pb90">
             <property name="geometry">
              <rect>
               <x>590</x>
-              <y>210</y>
-              <width>75</width>
+              <y>310</y>
+              <width>121</width>
               <height>23</height>
              </rect>
             </property>
@@ -2905,8 +2905,8 @@ background-color:#FCDBCE;
             <property name="geometry">
              <rect>
               <x>590</x>
-              <y>170</y>
-              <width>75</width>
+              <y>210</y>
+              <width>121</width>
               <height>23</height>
              </rect>
             </property>
@@ -2932,6 +2932,39 @@ background-color:#FCDBCE;
             </property>
             <property name="text">
              <string>Exporter</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton355">
+            <property name="geometry">
+             <rect>
+              <x>590</x>
+              <y>130</y>
+              <width>121</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+ background-color:#e86054;  /* Green */ 
+  border: none;
+ /* color: gray; 
+  padding: 15px 32px;*/
+  text-align: center;
+  font-size: 16px;
+	border:9px;
+}
+QPushButton:hover{
+
+background-color:#e0987b;
+color:#7d2b20;
+}
+QPushButton:click{
+
+background-color:#FCDBCE;
+}</string>
+            </property>
+            <property name="text">
+             <string>Trajets associes</string>
             </property>
            </widget>
           </widget>
@@ -3463,7 +3496,7 @@ background-color:#FCDBCE;
             <property name="geometry">
              <rect>
               <x>630</x>
-              <y>160</y>
+              <y>320</y>
               <width>75</width>
               <height>23</height>
              </rect>
