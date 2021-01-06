@@ -4,25 +4,20 @@ Connection::Connection()
 {
 
 }
-bool Connection::create_connection()
-{
-    bool test=false;
-    mydb= QSqlDatabase::addDatabase("QODBC");
 
-    mydb.setDatabaseName("test");
-    mydb.setUserName("yessine");
-    mydb.setPassword("yessine");
-    if (mydb.open())
-    {
-        qDebug()<<"Connection Reussite";
-        test=true;
-    }
-    else
-        qDebug()<<"Connection Echouee";
-    return test;
-}
-void Connection::close_connection()
-{
-    mydb.close();
-    mydb.removeDatabase(QSqlDatabase::defaultConnection);
+bool Connection::createconnect()
+{bool test=false;
+QSqlDatabase db = QSqlDatabase::addDatabase("QODBC");
+db.setDatabaseName("Source_Projet2A");//inserer le nom de la source de données ODBC
+db.setUserName("salma1");//inserer nom de l'utilisateur
+db.setPassword("salma1");//inserer mot de passe de cet utilisateur
+
+if (db.open())
+test=true;
+
+
+
+
+
+    return  test;
 }

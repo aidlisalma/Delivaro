@@ -2,9 +2,9 @@
 #define VOITURES_H
 #include"carac_voiture.h"
 
-QT_BEGIN_NAMESPACE
-namespace Ui { class mywindow; }
-QT_END_NAMESPACE
+//QT_BEGIN_NAMESPACE
+//namespace Ui { class delivaro; }
+//QT_END_NAMESPACE
 
 class Voitures
 {
@@ -13,20 +13,20 @@ private:
 
 public:
     Voitures();
-    void Ajouter( Ui::mywindow *);
-    void Supprimer(Ui::mywindow *);
-    void Modifier(Ui::mywindow *,int,int);
-    void Dispo(Ui::mywindow *);
-    void Rechercher(Ui::mywindow *);
-    void Affecter(Ui::mywindow *,carac_trajet);
-    void Load_DB(Ui::mywindow *);
+    /*void Ajouter( Ui::delivaro *);
+    void Supprimer(Ui::delivaro *);
+    void Modifier(Ui::delivaro *,int,int);
+    void Dispo(Ui::delivaro *);
+    void Rechercher(Ui::delivaro *);
+    void Affecter(Ui::delivaro *,carac_trajet);
+    void Load_DB(Ui::delivaro *);
     void Statistiques();
-    void Exporter(Ui::mywindow *);
+    void Exporter(Ui::delivaro *);
 
-    void Trajets_Associes(Ui::mywindow *, QVector<carac_trajet>);
+    void Trajets_Associes(Ui::delivaro *, QVector<carac_trajet>);*/
 
 
-    QVector<Carac_voiture> Get_V(){return V;};
+    //QVector<Carac_voiture> Get_V(){return V;};
 
 
 

@@ -1,5 +1,5 @@
 #include "trajets.h"
-#include "ui_mywindow.h"
+//#include "ui_delivaro.h"
 
 
 Trajets::Trajets()
@@ -7,7 +7,7 @@ Trajets::Trajets()
 
 }
 
-void Trajets::Ajouter(Ui::mywindow *ui, Voitures V1)
+/*void Trajets::Ajouter(Ui::delivaro *ui, Voitures V1)
 {
     carac_trajet e;
     e.set_numero(ui->lineEdit_2->text());
@@ -67,16 +67,16 @@ void Trajets::Ajouter(Ui::mywindow *ui, Voitures V1)
 
         msgbox.setText("Trajet Ajouté");
         msgbox.exec();
-        ui->stackedWidget_2->setCurrentIndex(0);
+        ui->stackedWidget_4->setCurrentIndex(0);
     }
     else
     {
         msgbox.setText("Numero deja existant");
         msgbox.exec();
     }
-}
+}*/
 
-void Trajets::Supprimer(Ui::mywindow *ui)
+/*void Trajets::Supprimer(Ui::delivaro *ui)
 {
     QMessageBox msgbox;
     msgbox.addButton(msgbox.Yes);
@@ -111,10 +111,10 @@ void Trajets::Supprimer(Ui::mywindow *ui)
         msgbox2.setText("Veuillez selectionner un trajet !");
         msgbox2.exec();
     }
-}
+}*/
 
 
-void Trajets::Load_DB(Ui::mywindow *ui)
+/*void Trajets::Load_DB(Ui::delivaro *ui)
 {
     qDebug()<<"looks good\n";
     Connection C;
@@ -152,4 +152,4 @@ void Trajets::Load_DB(Ui::mywindow *ui)
             qDebug()<<f.get_numero();
         }
     ui->table_trajet->setSortingEnabled(true);
-}
+}*/

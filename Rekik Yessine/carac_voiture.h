@@ -1,8 +1,9 @@
 #ifndef CARAC_VOITURE_H
 #define CARAC_VOITURE_H
-#include<QString>
+
 #include"carac_trajet.h"
 #include<QVector>
+/*
 #include<QDebug>
 #include <QMainWindow>
 #include<QMessageBox>
@@ -11,10 +12,11 @@
 #include<QComboBox>
 #include<QFile>
 #include <QTextStream>
-#include "connection.h"
+//#include "connection.h"
 #include <QtCharts>
 #include <QMediaPlayer>
 #include<QUrl>
+*/
 class Carac_voiture
 {
 private:
