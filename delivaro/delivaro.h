@@ -12,11 +12,10 @@
 #include <QSound>
 #include "reclamation.h"
 #include "publicite.h"
-#include"carac_trajet.h"
-#include"carac_voiture.h"
+#include<QMediaPlayer>
 
 
-#include"trajets.h"
+//#include"trajets.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -55,7 +54,7 @@ private slots:
 
     void on_pushButton_tabpartenaires_clicked();
 
-   // void on_pushButton_StatistiquesColis_clicked();
+    // void on_pushButton_StatistiquesColis_clicked();
 
     void on_pushButton_triColis_clicked();
 
@@ -116,7 +115,7 @@ private slots:
 
     void on_retourmenu_clicked();
     void on_passwordcheck_toggled(bool checked);
-
+/*
 
     void on_vt_clicked();
 
@@ -125,9 +124,6 @@ private slots:
     void on_y3_clicked();
     void on_y5_clicked();
     void on_y6_clicked();
-    void on_pb90_clicked();
-    void on_pb91_clicked();
-    void on_pb92_clicked();
 
 
 
@@ -165,32 +161,28 @@ private slots:
     void on_lineEdit_10_textChanged(const QString &arg1);
     void playsound();
 
-    void Load_DBV();
-    void Load_DBT();
 
-
-    void on_pushButton355_clicked();
-
+*/
 private:
     Ui::delivaro *ui;
     Colis tmpcolis;
     partenaire tmp_partenaires;
-        QRegExp nom_regex;
-        QRegExp identifiant_regex;
-        QRegExp nombre_commandes_regex;
-        QRegExp type_produit_regex;
-        QPropertyAnimation *contract_animation;
-          QPropertyAnimation *expand_animation;
+    QRegExp nom_regex;
+    QRegExp identifiant_regex;
+    QRegExp nombre_commandes_regex;
+    QRegExp type_produit_regex;
+    QPropertyAnimation *contract_animation;
+    QPropertyAnimation *expand_animation;
 
-          reclamation rtmp;
-          publicite ptmp;
-          QSound *son;
-          QSound *click;
+    reclamation rtmp;
+    publicite ptmp;
+    QSound *son;
+    QSound *click;
 
-          QVector<Carac_voiture> V;
-          QVector<carac_trajet> T;
-          //Voitures V;
-          //Trajets T;
+
+    //QVector<carac_trajet> T;
+    //Voitures V1;
+    //Trajets T1;
 
 };
 #endif // DELIVARO_H

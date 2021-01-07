@@ -1,23 +1,23 @@
 #ifndef COLIS_H
 #define COLIS_H
-#include <QString>
-#include <QDate>
-#include <QSqlQuery>
+#include<QString>
+#include<QDate>
+#include<QSqlQuery>
 #include<QSqlQueryModel>
-#include <QSqlRecord>
-#include <QTableView>
-#include <QFile>
-#include <QFileDialog>
-#include <QCoreApplication>
-#include <QTextStream>
+#include<QSqlRecord>
+#include<QTableView>
+#include<QFile>
+#include<QFileDialog>
+#include<QCoreApplication>
+#include<QTextStream>
 
 class Colis
 {
-        int NUM_COLIS;
-        QString ADRESSE;
-        QString ID_PARTENAIRE;
-        QString ID_CLIENT;
-        QDate DATE_LIVRAISON;
+    int NUM_COLIS;
+    QString ADRESSE;
+    QString ID_PARTENAIRE;
+    QString ID_CLIENT;
+    QDate DATE_LIVRAISON;
 public:
     Colis();
     Colis(int n,QString a,QString b,QString c,QDate d):NUM_COLIS(n),ADRESSE(a),ID_PARTENAIRE(b),ID_CLIENT(c),DATE_LIVRAISON(d){}

@@ -53,20 +53,20 @@ reclamation::reclamation(int id,int prodID,QString Description,QString date,int 
 }
 bool reclamation::ajouter()
 {
-QSqlQuery query;
-query.prepare("INSERT INTO RECLAMATION VALUES(:id,:ProdID,:Description,:date,:traite)");
-query.bindValue(":id",getID());
-query.bindValue(":ProdID",getProdID());
-query.bindValue(":Description",getDescription());
-query.bindValue(":date",getDate());
-query.bindValue(":traite",getTraite());
+    QSqlQuery query;
+    query.prepare("INSERT INTO RECLAMATION VALUES(:id,:ProdID,:Description,:date,:traite)");
+    query.bindValue(":id",getID());
+    query.bindValue(":ProdID",getProdID());
+    query.bindValue(":Description",getDescription());
+    query.bindValue(":date",getDate());
+    query.bindValue(":traite",getTraite());
 
-return query.exec();
+    return query.exec();
 
 }
 
 QSqlQueryModel * reclamation::afficher() //doesnt auto refresh unless u add someone
-    {
+{
     QSqlQueryModel * model = new QSqlQueryModel();
     model->setQuery("SELECT * FROM RECLAMATION");
     model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID"));
@@ -77,7 +77,7 @@ QSqlQueryModel * reclamation::afficher() //doesnt auto refresh unless u add some
 
 
     return model;
-    }
+}
 
 
 
@@ -88,7 +88,7 @@ bool reclamation::supprimer(int id) // when the id isnt correct doesnt show a ms
     query.prepare("DELETE FROM RECLAMATION WHERE ID = :id");
     query.bindValue(":id",res);
     return query.exec();
-    }
+}
 
 
 
@@ -97,14 +97,14 @@ QSqlQueryModel *reclamation::recherche(int id) //Works
     QString query1="SELECT * FROM RECLAMATION WHERE ID=";
     QString idtxt= QString::number(id);
     QString queryfull=query1 + idtxt;
-  // qDebug() << "query  :" << queryfull;
+    // qDebug() << "query  :" << queryfull;
 
     QSqlQueryModel * model = new QSqlQueryModel();
-      model->setQuery(queryfull);
-      model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID"));
-      model->setHeaderData(1,Qt::Horizontal,QObject::tr("PRODUIT_ID"));
-      model->setHeaderData(2,Qt::Horizontal,QObject::tr("DESCRIPTION"));
-      model->setHeaderData(3,Qt::Horizontal,QObject::tr("DATE"));
+    model->setQuery(queryfull);
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID"));
+    model->setHeaderData(1,Qt::Horizontal,QObject::tr("PRODUIT_ID"));
+    model->setHeaderData(2,Qt::Horizontal,QObject::tr("DESCRIPTION"));
+    model->setHeaderData(3,Qt::Horizontal,QObject::tr("DATE"));
     return model;
 }
 
@@ -112,13 +112,13 @@ QSqlQueryModel *reclamation::tri() // works
 {
     QSqlQuery query;
     query.prepare("SELECT * FROM RECLAMATION ORDER BY ID ASC");
-       query.exec();
+    query.exec();
     QSqlQueryModel * model = new QSqlQueryModel();
-      model->setQuery(query);
-      model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID"));
-      model->setHeaderData(1,Qt::Horizontal,QObject::tr("PRODUIT ID"));
-      model->setHeaderData(2,Qt::Horizontal,QObject::tr("DESCRIPTION"));
-      model->setHeaderData(3,Qt::Horizontal,QObject::tr("DATE"));
+    model->setQuery(query);
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID"));
+    model->setHeaderData(1,Qt::Horizontal,QObject::tr("PRODUIT ID"));
+    model->setHeaderData(2,Qt::Horizontal,QObject::tr("DESCRIPTION"));
+    model->setHeaderData(3,Qt::Horizontal,QObject::tr("DATE"));
     return model;
 }
 

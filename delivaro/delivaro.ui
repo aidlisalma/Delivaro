@@ -41,7 +41,7 @@ QPushButton {\n background-color:#e86054;  /* Green */ \n  border: none;\n /* co
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>4</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="authentification">
        <widget class="QWidget" name="layoutWidget_11">
@@ -184,7 +184,7 @@ QPushButton {\n background-color:#e86054;  /* Green */ \n  border: none;\n /* co
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
-          <widget class="QPushButton" name="pushButton_2">
+          <widget class="QPushButton" name="gestionpartenaires">
            <property name="text">
             <string>Gestion des partenaires</string>
            </property>
@@ -214,7 +214,7 @@ QPushButton {\n background-color:#e86054;  /* Green */ \n  border: none;\n /* co
         </layout>
        </widget>
       </widget>
-      <widget class="QWidget" name="page">
+      <widget class="QWidget" name="colisPartenaires">
        <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
@@ -296,7 +296,7 @@ background-color:#FCDBCE;
          <string notr="true"/>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="stackedWidgetPage1">
          <layout class="QGridLayout" name="gridLayout_3">
@@ -445,15 +445,15 @@ border-radius:4px
 }</string>
                   </property>
                   <property name="currentIndex">
-                   <number>1</number>
+                   <number>0</number>
                   </property>
                   <widget class="QWidget" name="page_7">
                    <property name="geometry">
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>100</width>
-                     <height>30</height>
+                     <width>588</width>
+                     <height>294</height>
                     </rect>
                    </property>
                    <attribute name="label">
@@ -517,8 +517,8 @@ background-color:#FCDBCE;
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>16</width>
-                     <height>16</height>
+                     <width>588</width>
+                     <height>294</height>
                     </rect>
                    </property>
                    <attribute name="label">
@@ -529,8 +529,8 @@ background-color:#FCDBCE;
                      <rect>
                       <x>10</x>
                       <y>20</y>
-                      <width>473</width>
-                      <height>22</height>
+                      <width>483</width>
+                      <height>24</height>
                      </rect>
                     </property>
                     <layout class="QHBoxLayout" name="horizontalLayout_19">
@@ -1573,8 +1573,8 @@ border-radius:4px
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>592</width>
-                 <height>285</height>
+                 <width>16</width>
+                 <height>16</height>
                 </rect>
                </property>
                <attribute name="label">
@@ -1638,8 +1638,8 @@ background-color:#FCDBCE;
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>592</width>
-                 <height>285</height>
+                 <width>100</width>
+                 <height>30</height>
                 </rect>
                </property>
                <attribute name="label">
@@ -1651,7 +1651,7 @@ background-color:#FCDBCE;
                   <x>23</x>
                   <y>30</y>
                   <width>299</width>
-                  <height>22</height>
+                  <height>24</height>
                  </rect>
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -1757,7 +1757,7 @@ border-radius:4px;
 }</string>
           </property>
           <property name="currentIndex">
-           <number>0</number>
+           <number>1</number>
           </property>
           <widget class="QWidget" name="tab">
            <attribute name="title">
@@ -2676,8 +2676,8 @@ background-color:#FCDBCE;
        <widget class="QTabWidget" name="tabWidget_2">
         <property name="geometry">
          <rect>
-          <x>340</x>
-          <y>170</y>
+          <x>730</x>
+          <y>30</y>
           <width>741</width>
           <height>391</height>
          </rect>
@@ -2694,7 +2694,7 @@ background-color:#FCDBCE;
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>711</width>
+            <width>681</width>
             <height>361</height>
            </rect>
           </property>
@@ -2774,7 +2774,7 @@ background-color:#FCDBCE;
              <rect>
               <x>590</x>
               <y>50</y>
-              <width>121</width>
+              <width>75</width>
               <height>23</height>
              </rect>
             </property>
@@ -2807,7 +2807,7 @@ background-color:#FCDBCE;
              <rect>
               <x>590</x>
               <y>90</y>
-              <width>121</width>
+              <width>75</width>
               <height>23</height>
              </rect>
             </property>
@@ -2839,107 +2839,8 @@ background-color:#FCDBCE;
             <property name="geometry">
              <rect>
               <x>590</x>
-              <y>170</y>
-              <width>121</width>
-              <height>23</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
- background-color:#e86054;  /* Green */ 
-  border: none;
- /* color: gray; 
-  padding: 15px 32px;*/
-  text-align: center;
-  font-size: 16px;
-	border:9px;
-}
-QPushButton:hover{
-
-background-color:#e0987b;
-color:#7d2b20;
-}
-QPushButton:click{
-
-background-color:#FCDBCE;
-}</string>
-            </property>
-            <property name="text">
-             <string>Statistiques</string>
-            </property>
-           </widget>
-           <widget class="QPushButton" name="pb90">
-            <property name="geometry">
-             <rect>
-              <x>590</x>
-              <y>310</y>
-              <width>121</width>
-              <height>23</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
- background-color:#e86054;  /* Green */ 
-  border: none;
- /* color: gray; 
-  padding: 15px 32px;*/
-  text-align: center;
-  font-size: 16px;
-	border:9px;
-}
-QPushButton:hover{
-
-background-color:#e0987b;
-color:#7d2b20;
-}
-QPushButton:click{
-
-background-color:#FCDBCE;
-}</string>
-            </property>
-            <property name="text">
-             <string>Retour</string>
-            </property>
-           </widget>
-           <widget class="QPushButton" name="pb92">
-            <property name="geometry">
-             <rect>
-              <x>590</x>
-              <y>210</y>
-              <width>121</width>
-              <height>23</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
- background-color:#e86054;  /* Green */ 
-  border: none;
- /* color: gray; 
-  padding: 15px 32px;*/
-  text-align: center;
-  font-size: 16px;
-	border:9px;
-}
-QPushButton:hover{
-
-background-color:#e0987b;
-color:#7d2b20;
-}
-QPushButton:click{
-
-background-color:#FCDBCE;
-}</string>
-            </property>
-            <property name="text">
-             <string>Exporter</string>
-            </property>
-           </widget>
-           <widget class="QPushButton" name="pushButton355">
-            <property name="geometry">
-             <rect>
-              <x>590</x>
               <y>130</y>
-              <width>121</width>
+              <width>75</width>
               <height>23</height>
              </rect>
             </property>
@@ -2964,7 +2865,7 @@ background-color:#FCDBCE;
 }</string>
             </property>
             <property name="text">
-             <string>Trajets associes</string>
+             <string>Stats</string>
             </property>
            </widget>
           </widget>
@@ -3492,39 +3393,6 @@ background-color:#FCDBCE;
              <string>Supprimer</string>
             </property>
            </widget>
-           <widget class="QPushButton" name="pb91">
-            <property name="geometry">
-             <rect>
-              <x>630</x>
-              <y>320</y>
-              <width>75</width>
-              <height>23</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
- background-color:#e86054;  /* Green */ 
-  border: none;
- /* color: gray; 
-  padding: 15px 32px;*/
-  text-align: center;
-  font-size: 16px;
-	border:9px;
-}
-QPushButton:hover{
-
-background-color:#e0987b;
-color:#7d2b20;
-}
-QPushButton:click{
-
-background-color:#FCDBCE;
-}</string>
-            </property>
-            <property name="text">
-             <string>Retour</string>
-            </property>
-           </widget>
           </widget>
           <widget class="QWidget" name="page_12">
            <widget class="QGroupBox" name="groupBox_7">
@@ -3941,7 +3809,7 @@ background-color:#FCDBCE;
      <x>0</x>
      <y>0</y>
      <width>1579</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

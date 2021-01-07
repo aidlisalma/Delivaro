@@ -13,17 +13,17 @@ statistique::statistique()
 }
 double statistique::statestique_partie1()
 {
-   // QString a="playground";
+    // QString a="playground";
 
     //QSqlQuery query;
     double count=0 ;
     QSqlQuery requete("select * from publicite where prix between 1 and 50") ;
     while(requete.next())
     {
-            count++ ;
+        count++ ;
     }
 
-return count ;
+    return count ;
 
 
 
@@ -32,16 +32,16 @@ return count ;
 double statistique::statestique_partie2()
 {
 
-   // QString b=" Salle de jeux";
-  //  QSqlQuery query;
+    // QString b=" Salle de jeux";
+    //  QSqlQuery query;
     double count=0 ;
     QSqlQuery requete("select * from publicite where prix between 51 and 100") ;
     while(requete.next())
     {
-            count++ ;
+        count++ ;
     }
 
-return count ;
+    return count ;
 }
 
 double statistique::traite1()
@@ -51,7 +51,7 @@ double statistique::traite1()
     QSqlQuery requete("select * from reclamation where traite =1") ;
     while(requete.next())
     {
-            count++ ;
+        count++ ;
     }
     return count;
 }
@@ -63,7 +63,7 @@ double statistique::traite0()
     QSqlQuery requete("select * from reclamation where traite =0") ;
     while(requete.next())
     {
-            count++ ;
+        count++ ;
     }
     return count;
 }

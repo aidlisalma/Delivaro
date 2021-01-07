@@ -21,7 +21,7 @@ public:
     int getProdID(){return prodID;}
     QString getDescription(){return Description;}
     QString getDate(){return date;}
-   int getTraite() {return traite;}
+    int getTraite() {return traite;}
 
     //Setters
     void setID(int x){id = x ;}

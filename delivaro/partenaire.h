@@ -3,7 +3,7 @@
 #include <QString>
 #include <QDate>
 #include <QSqlQuery>
-#include<QSqlQueryModel>
+#include <QSqlQueryModel>
 #include <QSqlRecord>
 #include <QTableView>
 #include <QFile>
@@ -35,11 +35,11 @@ public:
 
     bool ajouter();
     QSqlQueryModel *afficher();
-     bool supprimer(QString);
-     QSqlQueryModel * chercher_partenaire(QString);
-     QVector<double> getData();
-     QSqlQueryModel * trier_partenaire();
-     void imprimerpdf (QTableView *table);
+    bool supprimer(QString);
+    QSqlQueryModel * chercher_partenaire(QString);
+    QVector<double> getData();
+    QSqlQueryModel * trier_partenaire();
+    void imprimerpdf (QTableView *table);
 };
 
 #endif // PARTENAIRE_H

@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../../Documents/GitHub/Smart_Home_Delivery_2A1/delivaro/delivaro.h"
+#include "../../delivaro/delivaro.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_delivaro_t {
-    QByteArrayData data[42];
-    char stringdata0[1118];
+    QByteArrayData data[43];
+    char stringdata0[1128];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -71,8 +71,9 @@ QT_MOC_LITERAL(36, 979, 23), // "on_gestioncolis_clicked"
 QT_MOC_LITERAL(37, 1003, 32), // "on_gestionpubreclamation_clicked"
 QT_MOC_LITERAL(38, 1036, 17), // "on_retour_clicked"
 QT_MOC_LITERAL(39, 1054, 18), // "on_retour2_clicked"
-QT_MOC_LITERAL(40, 1073, 22), // "on_partenaires_clicked"
-QT_MOC_LITERAL(41, 1096, 21) // "on_retourmenu_clicked"
+QT_MOC_LITERAL(40, 1073, 21), // "on_retourmenu_clicked"
+QT_MOC_LITERAL(41, 1095, 24), // "on_passwordcheck_toggled"
+QT_MOC_LITERAL(42, 1120, 7) // "checked"
 
     },
     "delivaro\0on_deconnexion_clicked\0\0"
@@ -103,7 +104,8 @@ QT_MOC_LITERAL(41, 1096, 21) // "on_retourmenu_clicked"
     "on_gestioncolis_clicked\0"
     "on_gestionpubreclamation_clicked\0"
     "on_retour_clicked\0on_retour2_clicked\0"
-    "on_partenaires_clicked\0on_retourmenu_clicked"
+    "on_retourmenu_clicked\0on_passwordcheck_toggled\0"
+    "checked"
 };
 #undef QT_MOC_LITERAL
 
@@ -159,7 +161,7 @@ static const uint qt_meta_data_delivaro[] = {
       38,    0,  246,    2, 0x08 /* Private */,
       39,    0,  247,    2, 0x08 /* Private */,
       40,    0,  248,    2, 0x08 /* Private */,
-      41,    0,  249,    2, 0x08 /* Private */,
+      41,    1,  249,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -200,7 +202,7 @@ static const uint qt_meta_data_delivaro[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::Bool,   42,
 
        0        // eod
 };
@@ -248,8 +250,8 @@ void delivaro::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 34: _t->on_gestionpubreclamation_clicked(); break;
         case 35: _t->on_retour_clicked(); break;
         case 36: _t->on_retour2_clicked(); break;
-        case 37: _t->on_partenaires_clicked(); break;
-        case 38: _t->on_retourmenu_clicked(); break;
+        case 37: _t->on_retourmenu_clicked(); break;
+        case 38: _t->on_passwordcheck_toggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
         default: ;
         }
     }
