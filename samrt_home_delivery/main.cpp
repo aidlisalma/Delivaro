@@ -6,9 +6,9 @@
 int main(int argc, char *argv[])
 {
     QApplication program(argc, argv);
-    //QTranslator translator;
-    //translator.load("delivaro_en");
-   // program.installTranslator(&translator);
+    QTranslator translator;
+    translator.load("delivaro_en");
+    program.installTranslator(&translator);
 
 
     Connection c;

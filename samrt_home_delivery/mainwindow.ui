@@ -21,7 +21,7 @@
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="authentification">
        <widget class="QWidget" name="layoutWidget_11">
@@ -145,20 +145,16 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="options">
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
- background-color:#e86054;  /* Green */ 
-  border: none;
- /* color: gray; 
-  padding: 15px 32px;*/
-  text-align: center;
-  font-size: 16px;
-	border:9px;
-}</string>
-             </property>
+            <widget class="QRadioButton" name="radioButton_anglais">
              <property name="text">
-              <string>Options</string>
+              <string>Anglais</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButton_francais">
+             <property name="text">
+              <string>Français</string>
              </property>
             </widget>
            </item>
@@ -1687,8 +1683,8 @@ border-radius:4px
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>16</width>
-                    <height>16</height>
+                    <width>98</width>
+                    <height>28</height>
                    </rect>
                   </property>
                   <attribute name="label">
@@ -1752,8 +1748,8 @@ background-color:#FCDBCE;
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>100</width>
-                    <height>30</height>
+                    <width>98</width>
+                    <height>28</height>
                    </rect>
                   </property>
                   <attribute name="label">
@@ -1896,7 +1892,7 @@ border-radius:4px;
 }</string>
           </property>
           <property name="currentIndex">
-           <number>1</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="tab">
            <attribute name="title">
@@ -1906,7 +1902,7 @@ border-radius:4px;
             <property name="geometry">
              <rect>
               <x>40</x>
-              <y>280</y>
+              <y>60</y>
               <width>211</width>
               <height>241</height>
              </rect>
@@ -2244,6 +2240,7 @@ background-color:#FCDBCE;
              <string>Recherche</string>
             </property>
            </widget>
+           <zorder>groupBox_3</zorder>
            <zorder>label</zorder>
            <zorder>DureePub</zorder>
            <zorder>IdPub</zorder>
@@ -2256,7 +2253,6 @@ background-color:#FCDBCE;
            <zorder>SupprimerPub</zorder>
            <zorder>RecherchePub_2</zorder>
            <zorder>RecherchePub</zorder>
-           <zorder>groupBox_3</zorder>
            <zorder>widget_2</zorder>
            <zorder>StatPub</zorder>
            <zorder>tableViewPub</zorder>
@@ -2270,7 +2266,7 @@ background-color:#FCDBCE;
             <property name="geometry">
              <rect>
               <x>0</x>
-              <y>300</y>
+              <y>90</y>
               <width>261</width>
               <height>231</height>
              </rect>
@@ -2803,6 +2799,7 @@ background-color:#FCDBCE;
              <string>Menu</string>
             </property>
            </widget>
+           <zorder>groupBox_4</zorder>
            <zorder>iDLabel</zorder>
            <zorder>produitIDLabel</zorder>
            <zorder>IdRec</zorder>
@@ -2822,7 +2819,6 @@ background-color:#FCDBCE;
            <zorder>ModifierRec</zorder>
            <zorder>SupprimerRec</zorder>
            <zorder>Exporter</zorder>
-           <zorder>groupBox_4</zorder>
            <zorder>StatistiqueRec</zorder>
            <zorder>widget</zorder>
            <zorder>AjouterRec</zorder>

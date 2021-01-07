@@ -19,18 +19,18 @@ publicite::publicite(int id,int duree ,int prix,QString date)
 bool publicite::ajouter() //works
 {
     QSqlQuery query;
-    query.prepare("INSERT INTO PUBLICITE VALUES(:id,:prix,:duree,:date)");
+     query.prepare("INSERT INTO PUBLICITE VALUES(:id,:prix,:duree,:date)");
 
     query.bindValue(":id",getID());
     query.bindValue(":duree",getDuree());
     query.bindValue(":prix",getPrix());
     query.bindValue(":date",getDate());
     return query.exec();
-}
+   }
 QSqlQueryModel * publicite::afficher() //Works
 {
     QSqlQueryModel * model = new QSqlQueryModel();
-    model->setQuery("select * from publicite");
+    model->setQuery("SELECT * FROM PUBLICITE");
     model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID")); //horizontal
     model->setHeaderData(1,Qt::Horizontal,QObject::tr("PRIX")); //horizontal
     model->setHeaderData(2,Qt::Horizontal,QObject::tr("DUREE")); //horizontal

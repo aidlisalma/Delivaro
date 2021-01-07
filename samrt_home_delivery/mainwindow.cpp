@@ -75,8 +75,7 @@ void MainWindow::update_label()
 
 void MainWindow::on_pushButton_ajouterP_clicked()
 {
-    QSound::play("C:/Users/legion/Desktop/salma/Smart_Home_Delivery_2A1/delivaro/sound.wav");
-
+click->play();
     bool nom_verif = nom_regex.exactMatch(ui->lineEdit_nom->text());
     bool id_verif=identifiant_regex.exactMatch(ui->lineEdit_ID->text());
     bool nbC_verif=nombre_commandes_regex.exactMatch(ui->lineEdit_nbC->text());
@@ -132,8 +131,7 @@ void MainWindow::on_pushButton_ajouterP_clicked()
 
 void MainWindow::on_pushButton_ajouterColis_clicked()
 {
-    QSound::play("C:/Users/legion/Desktop/salma/Smart_Home_Delivery_2A1/delivaro/sound.wav");
-
+click->play();
     int num_colis=ui->lineEdit_numcolis->text().toInt();
     QString adresse=ui->lineEdit_adresseliv->text();
     QString nom_exp=ui->lineEdit_expediteur->text();
@@ -154,8 +152,7 @@ void MainWindow::on_pushButton_ajouterColis_clicked()
 
 void MainWindow::on_pushButton_modifier_Partenaires_clicked()
 {
-    QSound::play("C:/Users/legion/Desktop/salma/Smart_Home_Delivery_2A1/delivaro/sound.wav");
-
+click->play();
     if (ui->pushButton_modifier_Partenaires->isChecked())
     {
 
@@ -175,8 +172,7 @@ void MainWindow::on_pushButton_modifier_Partenaires_clicked()
 
 void MainWindow::on_pushButton_modifier_colis_clicked()
 {
-    QSound::play("C:/Users/legion/Documents/GitHub/Smart_Home_Delivery_2A1/Salma Aidli/InterfaceGraphique/click.wav");
-
+click->play();
     if (ui->pushButton_modifier_colis->isChecked())
     {
         ui->pushButton_modifier_colis->setText("Modification en cours");
@@ -195,8 +191,7 @@ void MainWindow::on_pushButton_modifier_colis_clicked()
 
 void MainWindow::on_pushButton_supprimer_colis_clicked()
 {
-    QSound::play("C:/Users/legion/Documents/GitHub/Smart_Home_Delivery_2A1/Salma Aidli/InterfaceGraphique/click.wav");
-
+click->play();
     QItemSelectionModel *select = ui->tableView_colis->selectionModel();
 
     int num_colis =select->selectedRows(0).value(0).data().toInt();
@@ -210,8 +205,7 @@ void MainWindow::on_pushButton_supprimer_colis_clicked()
 
 void MainWindow::on_pushButton_recherche_colis_clicked()
 {
-    QSound::play("C:/Users/legion/Documents/GitHub/Smart_Home_Delivery_2A1/Salma Aidli/InterfaceGraphique/click.wav");
-
+click->play();
     int NUM_COLIS = ui->lineEdit_recherche_colis->text().toInt();
     QSqlQueryModel * test=tmpcolis.chercher_colis(NUM_COLIS);
     if (ui->pushButton_recherche_colis->isChecked()){
@@ -240,20 +234,20 @@ void MainWindow::on_pushButton_recherche_colis_clicked()
 }
 
 void MainWindow::on_pushButton_export_colis_clicked()
-{       QSound::play("C:/Users/legion/Desktop/salma/Smart_Home_Delivery_2A1/delivaro/sound.wav");
-
+{
+click->play();
         tmpcolis.exporter(ui->tableView_colis);
             ui->statusbar->showMessage("EXPORT TABLE ",5000);
 }
 
 void MainWindow::on_pushButton_tabcolis_clicked()
-{
+{click->play();
     ui->stackedWidget_2->setCurrentIndex(0);
     ui->statusbar->showMessage("0");
 }
 
 void MainWindow::on_pushButton_tabpartenaires_clicked()
-{
+{   click->play();
     ui->stackedWidget_2->setCurrentIndex(1);
     ui->statusbar->showMessage("1");
 }
@@ -261,8 +255,7 @@ void MainWindow::on_pushButton_tabpartenaires_clicked()
 
 void MainWindow::on_pushButton_triColis_clicked()
 {
-    QSound::play("C:/Users/legion/Desktop/salma/Smart_Home_Delivery_2A1/delivaro/sound.wav");
-
+click->play();
     if(ui->radioButton_numcolis->isChecked())
     {
         ui->tableView_colis->setModel(tmpcolis.trier("NUM_COLIS",ui->AD->currentText()));
@@ -292,16 +285,14 @@ void MainWindow::on_lineEdit_recherche_colis_textChanged(const QString &arg1)
 
 void MainWindow::on_pushButton_export_partenaires_clicked()
 {
-    QSound::play("C:/Users/legion/Desktop/salma/Smart_Home_Delivery_2A1/delivaro/sound.wav");
-
+click->play();
     tmp_partenaires.imprimerpdf(ui->tableView_part);
 
 }
 
 void MainWindow::on_pushButton_supp_Partenaires_clicked()
 {
-    QSound::play("C:/Users/legion/Desktop/salma/Smart_Home_Delivery_2A1/delivaro/sound.wav");
-
+click->play();
     QItemSelectionModel *select = ui->tableView_part->selectionModel();
 
     QString n =select->selectedRows(0).value(0).data().toString();
@@ -314,8 +305,7 @@ void MainWindow::on_pushButton_supp_Partenaires_clicked()
 
 void MainWindow::on_pushButton_Statistiques_partenaires_clicked()
 {
-    QSound::play("C:/Users/legion/Desktop/salma/Smart_Home_Delivery_2A1/delivaro/sound.wav");
-
+click->play();
     QLinearGradient gradient(0, 0, 0, 400);
     gradient.setColorAt(0, QColor(90, 90, 90));
     gradient.setColorAt(0.38, QColor(105, 105, 105));
@@ -372,7 +362,7 @@ void MainWindow::on_pushButton_Statistiques_partenaires_clicked()
 }
 
 void MainWindow::on_contract_colis_clicked()
-{
+{click->play();
     static int turn=1;
     if (turn==1)
     {
@@ -385,13 +375,11 @@ void MainWindow::on_contract_colis_clicked()
         ui->contract_colis->setText("Contract");
     }
     turn*=-1;
-    QSound::play("C:/Users/legion/Desktop/salma/Smart_Home_Delivery_2A1/delivaro/sound.wav");
 }
 
 void MainWindow::on_pushButton_recherche_partenaires_clicked()
 {
-    QSound::play("C:/Users/legion/Desktop/salma/Smart_Home_Delivery_2A1/delivaro/sound.wav");
-
+click->play();
     QString NOM = ui->lineEdit_recherche__partenaires->text();
     QSqlQueryModel *test=tmp_partenaires.chercher_partenaire(NOM);
     if (ui->pushButton_recherche_partenaires->isChecked()){
@@ -812,7 +800,7 @@ void MainWindow::on_RechercheRec_clicked()
 
 void MainWindow::on_login_clicked()
 {
-
+click->play();
     QString identifiant = ui->lineEdit_login->text();
     QString mdp = ui->lineEdit_password->text();
     QSound::play("C:/Users/legion/Desktop/salma/Smart_Home_Delivery_2A1/delivaro/sound.wav");
@@ -849,8 +837,7 @@ void MainWindow::on_login_clicked()
 
 void MainWindow::on_gestionpartenaires_clicked()
 {
-    QSound::play("C:/Users/legion/Desktop/salma/Smart_Home_Delivery_2A1/delivaro/sound.wav");
-
+click->play();
     ui->stackedWidget->setCurrentIndex(2);
 
     ui->stackedWidget_2->setCurrentIndex(1);
@@ -859,8 +846,7 @@ void MainWindow::on_gestionpartenaires_clicked()
 
 void MainWindow::on_gestioncolis_clicked()
 {
-    QSound::play("C:/Users/legion/Desktop/salma/Smart_Home_Delivery_2A1/delivaro/sound.wav");
-
+click->play();
     ui->stackedWidget->setCurrentIndex(2);
 
     ui->stackedWidget_2->setCurrentIndex(0);
@@ -868,17 +854,17 @@ void MainWindow::on_gestioncolis_clicked()
 }
 
 void MainWindow::on_gestionpubreclamation_clicked()
-{
+{click->play();
     ui->stackedWidget->setCurrentIndex(3);
 }
 
 void MainWindow::on_retour_clicked()
-{
+{click->play();
     ui->stackedWidget->setCurrentIndex(1);
 }
 
 void MainWindow::on_retour2_clicked()
-{
+{click->play();
     ui->stackedWidget->setCurrentIndex(1);
 
 }
@@ -886,13 +872,13 @@ void MainWindow::on_retour2_clicked()
 
 
 void MainWindow::on_retourmenu_clicked()
-{
+{click->play();
     ui->stackedWidget->setCurrentIndex(1);
 
 }
 void MainWindow::on_passwordcheck_toggled(bool checked)
 {
-
+click->play();
     if(checked){
         ui->lineEdit_password->setEchoMode(QLineEdit::Normal);
     }
@@ -901,8 +887,8 @@ void MainWindow::on_passwordcheck_toggled(bool checked)
 }
 
 void MainWindow::on_pushButton_envoyerbonC_clicked()
-{       QSound::play("C:/Users/legion/Desktop/salma/Smart_Home_Delivery_2A1/delivaro/sound.wav");
-
+{
+click->play();
     email email_window(this);
     email_window.exec();
     email_window.show();
@@ -913,7 +899,7 @@ void MainWindow::on_radioButton_modeNuit_toggled(bool)
 {
     this->setStyleSheet("font: 8pt \"Pacifico\";"
                             "background-color: rgb(43, 40, 38);"
-                            "color: rgb(255, 255, 255);");
+                            "color: #FFFFFF;");
 
 
         QList<QPushButton *> butts = this->findChildren<QPushButton *>();
@@ -928,7 +914,8 @@ void MainWindow::on_radioButton_modeNuit_toggled(bool)
 
         for (int i=0; i<tabs.size();i++)
         {
-            tabs.at(i)->setStyleSheet("QTabBar::tab { background-color: rgb(68, 68, 68);}");
+            tabs.at(i)->setStyleSheet("QTabBar::tab { background-color: rgb(68, 68, 68);}"
+                                                        "color: #FFFFFF;");
         }
 
         //        QList<QTableView *> tabviews = this->findChildren<QTableView *>();
@@ -957,7 +944,8 @@ void MainWindow::on_radioButton_modeJour_toggled(bool)
 }
 
 void MainWindow::on_alerte_clicked()
-{   if(ui->alerte->isChecked())
+{   click->play();
+    if(ui->alerte->isChecked())
     {
         buzzer="yes";
         const char * p1= buzzer.toStdString().c_str();
@@ -970,5 +958,27 @@ void MainWindow::on_alerte_clicked()
         ui->alerte->setDisabled(true);
 
     }
+}
 
+void MainWindow::on_radioButton_anglais_toggled(bool checked)
+{
+    translator->load("C:/Users/legion/Desktop/delivaro(salma+abdou)/samrt_home_delivery/samrt_home_delivery_en");
+
+            qApp->installTranslator(translator);
+            ui->retranslateUi(this);
+
+}
+
+void MainWindow::on_radioButton_francais_toggled(bool checked)
+{
+    translator->load("C:/Users/legion/Desktop/delivaro(salma+abdou)/samrt_home_delivery/samrt_home_delivery_fr");
+
+            qApp->installTranslator(translator);
+            ui->retranslateUi(this);
+}
+
+void MainWindow::on_deconnexMenu_clicked()
+{
+    click->play();
+    ui->stackedWidget->setCurrentIndex(0);
 }

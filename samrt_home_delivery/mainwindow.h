@@ -15,7 +15,7 @@
 #include "reclamation.h"
 #include "publicite.h"
 #include<QMediaPlayer>
-
+#include<QTranslator>
 #include "email.h"
 #include "arduino.h"
 
@@ -137,6 +137,12 @@ private slots:
 
     void on_alerte_clicked();
 
+    void on_radioButton_anglais_toggled(bool checked);
+
+    void on_radioButton_francais_toggled(bool checked);
+
+    void on_deconnexMenu_clicked();
+
 private:
     Ui::MainWindow *ui;
     Colis tmpcolis;
@@ -156,6 +162,7 @@ private:
     arduino A;
     double temperature;
     QString buzzer ="no";
+    QTranslator* translator=new QTranslator;
 
 
 };

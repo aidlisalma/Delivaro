@@ -13,7 +13,6 @@ SOURCES += \
     colis.cpp \
     connection.cpp \
     email.cpp \
-    login.cpp \
     main.cpp \
     mainwindow.cpp \
     partenaire.cpp \
@@ -28,7 +27,6 @@ HEADERS += \
     colis.h \
     connection.h \
     email.h \
-    login.h \
     mainwindow.h \
     partenaire.h \
     publicite.h \
@@ -41,7 +39,8 @@ FORMS += \
     email.ui \
     mainwindow.ui
 
-TRANSLATIONS = samrt_home_delivery_en.ts
+TRANSLATIONS = samrt_home_delivery_en.ts samrt_home_delivery_fr.ts
+
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
