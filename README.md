@@ -1,1 +1,1 @@
-# Smart_Home_Delivery_2A1
+# Smart_Home_Delivery_QT_Desktop_App
